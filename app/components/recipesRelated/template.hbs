@@ -1,0 +1,23 @@
+<div data-uri="{{ default _ref _self }}" data-editable="settings" class="recipes-related">
+  <p data-editable="settings" class="explore">Explore More</p>
+  <div data-editable="settings" class="recipes">
+    {{#each relatedRecipe}}
+      {{#if title}}
+        <div data-editable="settings" class="reciperr">
+          <img data-editable="settings" src="{{urlImg}}" class="imagerr">
+          <p data-editable="settings" class="titlerr">{{ title }}</p>
+          <div data-editable="settings" class="scorerr">
+            <div class="starsrr">
+              <img src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg">
+              <img src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg">
+              <img src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg">
+              <img src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg">
+              <img src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/half-star-2015.svg">
+            </div>
+            <p class="likesrr">{{likes}}</p>
+          </div>
+        </div>
+      {{/if}}
+    {{/each}}
+  </div>
+</div>

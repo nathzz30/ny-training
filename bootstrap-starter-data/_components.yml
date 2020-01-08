@@ -106,10 +106,20 @@ _components:
     instances:
       new:
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel suscipit quam. Phasellus sagittis nibh a purus euismod ultricies. Pellentesque tempus nec lacus in rhoncus. Sed ullamcorper augue ac augue ornare dictum. Nam nec imperdiet nisi, at dapibus magna. Aliquam id semper mi, et blandit ex. Quisque erat mi, commodo in ante vitae, efficitur pretium ligula. In consectetur diam vel sem dapibus, at mollis erat viverra. Cras dolor nisi, dignissim non semper eu, porta et turpis. Nam malesuada est justo, ac molestie ex auctor vitae. Nullam eget lectus vitae mauris cursus semper id eget sapien.'
+      recipe:
+        text: 'Hummus: not just for pita chips anymore! This versatile dip is the perfect topper for these Mediterranean power bowls. Here, it’s mixed with smoky paprika for a delicious flavor boost. In case you were wondering, underneath the hummus lies a whole world of deliciousness. At the base, there’s fluffy, Turkish-spiced couscous mixed with lemon zest. On top, you’ve also got cucumber-dill salad, roasted bell pepper and tomato, creamy lemon sauce, and crumbly feta cheese. Together, it’s a multi-layered melange that’ll knock your chickpea-loving socks off.'
   tags:
     instances:
       new:
         items: []
+      recipe:
+        items: 
+          -
+            text: recipe
+          -
+            text: clay
+          -
+            text: apple
       sample:
         items:
           -
@@ -176,3 +186,99 @@ _components:
             _ref: /_components/paragraph/instances/new
         tags:
           _ref: /_components/tags/instances/sample
+  main-recipe:
+    instances:
+      recipe-sample:
+        myList:
+          -
+            _ref: /_components/recipe/instances/recipe
+          -
+            _ref: /_components/recipesRelated/instances/new
+      test:
+        myList: 
+          -
+            _ref: /_components/recipe/instances/test
+          -
+            _ref: /_components/recipesRelated/instances/new
+  recipe:
+    instances:
+      recipe:
+        type: ''
+        descriptionRecipe: '"This relish has a great flavor especially with the addition of celery! Chopped pecans or walnuts can be added if desired."'
+        author: 'Karen Dunn'
+        recipeTitle: 'Apple Cranberry Relish'
+        imgBigUrl: 'https://images.media-allrecipes.com/userphotos/720x405/7435846.jpg'
+        img1: 'https://images.media-allrecipes.com/userphotos/125x70/309957.jpg'
+        img2: 'https://images.media-allrecipes.com/userphotos/125x70/7435846.jpg'
+        img3: 'https://images.media-allrecipes.com/userphotos/125x70/1738054.jpg'
+        img4: 'https://images.media-allrecipes.com/userphotos/125x70/158870.jpg'
+        stepInfoRecipe: 'Grate peel of orange; reserve. Peel oranges and discard white membranes. Separate oranges into sections and place half in a food processor or blender. To the food processor add half of the cranberries, apples and celery. Process until coarsely chopped. Transfer to a bowl; repeat with remaining oranges, cranberries, apples and celery. Stir in sugar and reserved orange peel. Cover and refrigerate overnight.'
+        readyTimeRecipe: '12h 30m'
+        preparationTimeStep: '30m'
+        totalServings: '16 Servings'
+        totalCalsPerServings: '188'
+        ingredientsList:
+          - '2 unit oranges'
+          - '2 unit cranberries'
+          - '2 unit apples'
+          - '2 unit celery'
+          - '3 cups whitesugar'
+        nutriFactsList:
+          - '0.2 gramme fat'
+          - '48.4 gramme carbohydrates'
+          - '0.5 gramme proteing'
+          - '0 milligramme cholesterol'
+          - '10 milligramme sodium'
+        ingredients: []
+        nutriFacts: []
+        tags:
+          _ref: /_components/tags/instances/recipe
+
+ 
+      test:
+        type: ''
+        descriptionRecipe: ''
+        author: ''
+        recipeTitle: ''
+        imgBigUrl: ''
+        img1: ''
+        img2: ''
+        img3: ''
+        img4: ''
+  nathzz:
+    instances:
+      nathzz:
+        adText: ''
+        color: White
+  recipesRelated:
+    instances:
+      new:
+        data:
+          - 'Awesome Sausage, Apple and Cranberry Stuffing * 
+          https://www.allrecipes.com/recipe/13651/awesome-sausage-apple-and-cranberry-stuffing/?internalSource=similar_recipe_banner&referringId=22950&referringContentType=Recipe&clickId=simslot_1 * 
+          2k * https://images.media-allrecipes.com/userphotos/150x150/764614.jpg'
+          - 'Cranberry Sauce * 
+          https://www.allrecipes.com/recipe/9111/cranberry-sauce/?internalSource=similar_recipe_banner&referringId=22950&referringContentType=Recipe&clickId=simslot_2 * 
+          2k * https://images.media-allrecipes.com/userphotos/150x150/743657.jpg'
+          - 'Cranberry, Sausage and Apple Stuffing * 
+          https://www.allrecipes.com/recipe/9115/cranberry-sausage-and-apple-stuffing/?internalSource=similar_recipe_banner&referringId=22950&referringContentType=Recipe&clickId=simslot_3 * 
+          230 * https://images.media-allrecipes.com/userphotos/150x150/610223.jpg'
+          - 'Cranberry, Apple, and Fresh Ginger Chutney * 
+          https://www.allrecipes.com/recipe/152239/cranberry-apple-and-fresh-ginger-chutney/?internalSource=similar_recipe_banner&referringId=22950&referringContentType=Recipe&clickId=simslot_4 * 
+          91 * https://images.media-allrecipes.com/userphotos/150x150/1747986.jpg'
+        relatedRecipe: []
+  sidebar:
+    instances:
+      new:
+        componentVariation: sidebar
+        list: 
+          - 'Awesome Sausage, Apple and Cranberry Stuffing * 
+          https://www.allrecipes.com/recipe/13651/awesome-sausage-apple-and-cranberry-stuffing/?internalSource=similar_recipe_banner&referringId=22950&referringContentType=Recipe&clickId=simslot_1 * 
+          2k * https://images.media-allrecipes.com/userphotos/150x150/764614.jpg * Toni'
+          - 'Cranberry Sauce, and Fresh Ginger Chutney * 
+          https://www.allrecipes.com/recipe/9111/cranberry-sauce/?internalSource=similar_recipe_banner&referringId=22950&referringContentType=Recipe&clickId=simslot_2 * 
+          2k * https://images.media-allrecipes.com/userphotos/150x150/743657.jpg * Jack'
+        recommendedRecipe: []
+
+
+      

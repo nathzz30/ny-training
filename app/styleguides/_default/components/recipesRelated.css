@@ -1,0 +1,43 @@
+.recipes-related {
+  cursor: pointer;
+  font-family: 'Source Sans Pro', Arial;
+  font-size: 14px;
+  max-height: 350px;
+  margin-bottom: 30px;
+}
+
+.recipes {
+  display: flex;
+}
+
+.explore {
+  font-size: 26px;
+  display: block;
+}
+
+.reciperr {
+  margin: 5px;
+  max-width: 150px;
+}
+
+.imagerr {
+  height: 130px;
+  width: 100%;
+}
+
+.titlerr {
+  color: #2d2d2d;
+  max-width: 150px;
+}
+
+.scorerr {
+  display: inline-block;
+}
+
+.starsrr {
+  display: inline-block;
+}
+
+.likesrr {
+  color: #999999;
+}

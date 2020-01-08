@@ -1,0 +1,43 @@
+_version: 1.0
+
+_description: |
+  A basic recipes Related component.
+
+_confirmRemoval: true
+
+relatedRecipe:
+  _has:
+    input: complex-list
+    collapse: title
+    filter: true
+    props:
+      -
+        prop: title
+        _label: Title
+        _has:
+          input: text
+      -
+        prop: likes
+        _label: Likes
+        _has:
+          input: text
+          type: numbers
+      -
+        prop: urlImg
+        _label: Image
+        _has: 
+          input: text
+      -
+        prop: urlRecipe
+        _label: Recipe URL
+        _has:
+          input: text
+
+_groups:
+  settings:
+    fields:
+      - relatedRecipe
+    _placeholder:
+      height: 80px
+      text: Recipes Related
+      ifEmpty: relatedRecipe

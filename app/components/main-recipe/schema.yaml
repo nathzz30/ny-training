@@ -1,0 +1,16 @@
+_description: |
+  A basic main recipe component.
+
+_confirmRemoval: true
+
+myList:
+  _placeholder:
+    height: 600px
+  _componentList:
+    page: true
+    include:
+      - nathzz
+      - paragraph
+      - sidebar
+      - recipes-related
+      - recipe

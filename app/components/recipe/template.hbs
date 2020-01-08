@@ -1,0 +1,110 @@
+<div data-uri="{{ default _ref _self }}" class="recipe">
+  <div data-editable="settings">
+    {{#if recipeTitle}}
+      <div data-editable="settings" class="information">
+        <p data-editable="settings" class="title">{{ recipeTitle }}</p>
+        <div data-editable="settings" class="score">
+          <div class="imgScore">
+            <img class="score-stars-recipe" src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg">
+            <img class="score-stars-recipe" src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg">
+            <img class="score-stars-recipe" src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg">
+            <img class="score-stars-recipe" src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg">
+            <img class="score-stars-recipe" src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/half-star-2015.svg">
+          </div>
+          <div data-editable="settings" class="infoScore">
+            <a data-editable="settings" href="/" class="made">73 made it</a>
+            <a data-editable="settings" href="/" class="reviews">37 reviews</a>
+            <a data-editable="settings" href="/" class="photos">3 photos</a>
+          </div>
+        </div>
+        {{#if author }}
+          <p data-editable="settings" class="recipeBy">Recipe by: <span class="recipeDescription">{{ author }}</span></p>
+        {{/if}}
+        {{#if descriptionRecipe }}
+          <p data-editable="settings" class="description">{{ descriptionRecipe }}</p>
+          <div class="subscribe">
+            <a data-editable="settings" href="/">Featured in Allrecipes Magazine -- Subscribe!</a>
+          </div>
+        {{/if}}
+      </div>
+      {{#if imgBigUrl}}
+        <div class="images">
+          <div class="imgActive2">
+            <img src={{ imgBigUrl }} class="imgActive2">
+          </div>
+          <div class="imagesRelated">
+            <img src={{ img1 }} class="carousel">
+            <img src={{ img2 }} class="carousel">
+            <img src={{ img3 }} class="carousel">
+            <img src={{ img4 }} class="carousel">
+          </div>
+        </div>
+      {{/if}}
+      <div class="btns">
+        <button class="btn"><a class="svg">{{{ read 'public/media/sites/claydemo/like.svg' }}}</a> Save</button>
+        <button class="btn"><a class="svg">{{{ read 'public/media/sites/claydemo/iconmonstr-eat-7.svg' }}}</a> Made It</button>
+        <button class="btn"><a class="svg">{{{ read 'public/media/sites/claydemo/likeheart.svg' }}}</a> Rate it</button>
+        <button class="btn"><a class="svg">{{{ read 'public/media/sites/claydemo/printer-printing-document.svg' }}}</a> Print</button>
+        <button class="btn"><a class="svg">{{{ read 'public/media/sites/claydemo/iconmonstr-pinterest-1-option.svg' }}}</a> Pin</button>
+        <button class="btn"><a class="svg">{{{ read 'public/media/sites/claydemo/facebook-brands-option.svg' }}}</a> Share</button>
+      </div>
+      <div class="ingredients">
+        <div class="ingredientsInfo">
+          <p class="ingre-title">Ingredients</p>
+          <div class="infoRecipe">
+            <p>{{readyTimeRecipe}}<a class="ingredient-icon">{{{ read 'public/media/sites/claydemo/wall-clock.svg' }}}</a></p>
+            <p>{{totalServings}}<a class="ingredient-icon">{{{ read 'public/media/sites/claydemo/chart-pie.svg' }}}</a></p>
+            <p>{{totalCalsPerServings}} Cals<a class="ingredient-icon">{{{ read 'public/media/sites/claydemo/bar-chart.svg' }}}</a></p>
+          </div>
+        </div>
+        {{#if ingredients}}
+          <div class="ingredientsRecipe">
+            {{#each ingredients}}
+              <a class="ingredient-icon">{{{ read 'public/media/sites/claydemo/plus.svg' }}}</a><p>{{cantMeasure}} {{unitMeasure}} {{ingredient}}
+                {{#if instructions}}
+                , {{instructions}}
+                {{/if}}</p>
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+      <div class="steps">
+        <div class="directions">
+          <p>Directions</p>
+          <div class="stepsBtns">
+            <button class="stepBtn">Add a Note <a class="ingredient-icon">{{{ read 'public/media/sites/claydemo/icons8-edit.svg' }}}</a></button>
+            <button class="stepBtn">Print <a class="ingredient-icon">{{{ read 'public/media/sites/claydemo/printer-printing-document.svg' }}}</a></button>
+          </div>
+        </div>
+        <div class="timePreparation">
+          <a class="preparation-icon">{{{ read 'public/media/sites/claydemo/wall-clock2.svg' }}}</a>
+          <p class="element"><span>Prep</span> {{preparationTimeStep}}</p>
+          <p class="element"><span>Ready In</span> {{readyTimeRecipe}}</p>
+        </div>
+        <div class="stepInfo">
+          <p>{{stepInfoRecipe}}</p>
+        </div>
+      </div>
+      {{#if totalCalsPerServings}}
+        <div class="nutritionFacts">
+          <p class="nutrition-title">Nutrition Facts</p>
+          <p>Per Serving: 
+            {{totalCalsPerServings}} cals; 
+            {{#each nutriFacts}}
+              {{cantMeasure}} {{unitMeasure}} {{fact}};
+            {{/each}}
+          </p>
+          <button class="nutri-made-it"><a class="made-it">{{{ read 'public/media/sites/claydemo/iconmonstr-eat-7-copy.svg' }}}</a> I made it!</button>
+        </div>
+        {{> tags tags}}
+    {{/if}}
+      <div class="socials">
+        <p>Share</p>
+        <a class="btn-pinterest">{{{ read 'public/media/sites/claydemo/iconmonstr-pinterest-1.svg' }}}</a>
+        <a class="btn-facebook">{{{ read 'public/media/sites/claydemo/facebook-brands.svg' }}}</a>
+        <a class="btn-twitter">{{{ read 'public/media/sites/claydemo/iconmonstr-twitter-4.svg' }}}</a>
+        <a class="btn-mail">{{{ read 'public/media/sites/claydemo/email.svg' }}}</a>
+      </div>
+    {{/if}}
+  </div>
+</div>

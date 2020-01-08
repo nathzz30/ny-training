@@ -1,0 +1,33 @@
+_description: |
+  A basic nathzz component.
+
+_confirmRemoval: true
+
+adText:
+  _has:
+    input: text
+  _label: NathzZ Content
+  _placeholder:
+    text: NathzZ Content
+    height: 600px
+
+color:
+  _has:
+    input: radio
+    help: Select the color that you want for the background.
+    options:
+      - Green 
+      - Red 
+      - Blue 
+      - Black 
+      - White
+
+_groups:
+  settings:
+    fields:
+      - adText
+      - color (Color)
+    _placeholder:
+      text: A Nathz Component
+      height: 50px
+      ifEmpty: adText

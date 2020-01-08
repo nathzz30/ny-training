@@ -1,0 +1,9 @@
+_components:
+  recipe:
+    type: ''
+    descriptionRecipe: '"This relish has a great flavor especially with the addition of celery! Chopped pecans or walnuts can be added if desired."'
+    author: 'Karen Dunn'
+    recipeTitle: 'Apple Cranberry Relish'
+    imgBigUrl: ''
+    tags:
+      _ref: /_components/recipe

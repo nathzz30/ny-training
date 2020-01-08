@@ -1,0 +1,27 @@
+<div data-uri="{{ default _ref _self }}" data-editable="settings" class="recommended-recipes">
+  <div data-editable="settings" class="head-sidebar">
+    <p data-editable="settings" class="explore-sidebar">Recommended</p>
+    <a data-editable="settings" class="more-sidebar" href="/">See more</a>
+  </div>
+  <div data-editable="settings" class="recipes-sidebar">
+    {{#each recommendedRecipe}}
+      {{#if title}}
+        <div data-editable="settings" class="recipe-sidebar">
+          <img data-editable="settings" src="{{urlImg}}" class="image-sidebar">
+          <p data-editable="settings" class="title-sidebar">{{ title }}</p>
+          <div data-editable="settings" class="score-sidebar">
+            <div class="stars-sidebar">
+              <img src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg">
+              <img src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg">
+              <img src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg">
+              <img src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg">
+              <img src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/half-star-2015.svg">
+            </div>
+            <p class="likes-sidebar">{{likes}}</p>
+          </div>
+          <p class="author-sidebar">By {{author}}</p>
+        </div>
+      {{/if}}
+    {{/each}}
+  </div>
+</div>

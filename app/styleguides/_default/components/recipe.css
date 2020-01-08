@@ -1,0 +1,300 @@
+.recipe {
+  font-family: 'Source Sans Pro', Arial;
+  color: #4d4d4d;
+}
+
+a {
+  color: #ff7e1a;
+  text-decoration: none;
+}
+
+.information {
+  display: inline-block;
+  width: 37%;
+  padding: 30px;
+}
+
+.ingre-title {
+  font-size: 26px;
+}
+
+.infoRecipe {
+  display: flex;
+}
+
+.recipe .title {
+  font-size: 22px;
+  text-align: center;
+}
+
+.score {
+  display: block;
+  font-size: 14px;
+  text-align: center;
+}
+
+.imgScore {
+  margin-bottom: 20px;
+}
+
+.infoScore {
+  font-size: 16px;
+}
+
+.kiln-wrapper .kiln-overlay-form {
+  display: flex;
+}
+
+.made {
+  border-right-color: #b3b3b3;
+  border-right-style: solid;
+  border-right-width: 1px;
+  padding-right: 5px;
+  margin-right: 5px;
+}
+
+.reviews {
+  border-right-color: #b3b3b3;
+  border-right-style: solid;
+  border-right-width: 1px;
+  padding-right: 5px;
+  margin-right: 5px;
+}
+
+.recipeBy {
+  color: #808080;
+  font-size: 14.22px;
+}
+
+.recipeDescription {
+  color: black;
+}
+
+.description {
+  font-size: 14.22px;
+  margin-bottom: 40px;
+}
+
+.subscribe {
+  border-top-color: #b3b3b3;
+  border-top-style: solid;
+  border-top-width: 0.5px;
+  font-size: 16px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.images {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  width: 54%;
+}
+
+.imgActive {
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.imgActive2 {
+  max-height: 270px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.imagesRelated {
+  display: inline-block;
+}
+
+.carousel {
+  width: 20%;
+  margin-top: 5px;
+}
+
+.btns {
+  background-color: #d9d9d9;
+  margin: 30px 0;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  display: flex;
+  background-color: #d9d9d9;
+  border: none;
+  text-align: center;
+  font-size: 17px;
+  padding: 20px;
+  width: 160px;
+  cursor: pointer;
+}
+
+.stepsBtns {
+  display: block;
+}
+
+.steps {
+  border-bottom-width: thin;
+  border-bottom-style: dotted;
+  border-bottom-color: #999999;
+}
+
+.stepBtn {
+  display: inline-block;
+  background-color: none;
+  border: none;
+  text-align: center;
+  font-size: 17px;
+  padding: 5px;
+  width: 160px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.element {
+  display: grid;
+}
+
+.element > span {
+  color: #999999;
+}
+
+.preparation-icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  color: #999999;
+  position: relative;
+  top: 8px;
+  margin-right: 20px;
+}
+
+.nutri-made-it {
+  display: flex;
+  background-color: #feaa26;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px 15px;
+  width: 300px;
+  cursor: pointer;
+  margin: 30px 0;
+  color: white;
+}
+
+.ingredients {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.ingredients > p {
+  display: flex;
+  font-size: 26px;
+}
+
+.ingredientsInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom-color: #b3b3b3;
+  border-bottom-style: solid;
+  border-bottom-width: 0.5px;
+}
+
+.ingredient-icon {
+  width: 24px;
+  height: 24px;
+  margin: 0 5px;
+  color: #999999;
+}
+
+.ingredientsRecipe {
+  display: flex;
+  font-size: 14.22px;
+  margin: 20px 10px;
+}
+
+.ingredientsRecipe > p {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.ingredientsRecipe > a {
+  margin: 10px 10px;
+}
+
+.infoRecipe {
+  display: flex;
+  font-size: 14px;
+}
+
+.infoRecipe > p {
+  display: flex;
+  margin: 5px;
+  align-items: center;
+}
+
+.directions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom-color: #b3b3b3;
+  border-bottom-style: solid;
+  border-bottom-width: 0.5px;
+}
+
+.score-stars-recipe {
+  height: 25px;
+  width: 25px;
+}
+
+.directions > p {
+  font-size: 26px;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+.option-icon {
+  width: 24px;
+  height: 24px;
+  margin: 0 10px;
+  color: #999999;
+}
+
+.timePreparation {
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+}
+
+.timePreparation > p {
+  margin-right: 10px;
+}
+
+.stepInfo {
+  font-size: 15px;
+  margin: 0 55px;
+  margin-bottom: 30px;
+  color: #2d2d2d;
+}
+
+.nutritionFacts {
+  font-size: 14.22px;
+  margin: 10px 20px;
+}
+
+.nutrition-title {
+  font-size: 18px;
+}
+
+.made-it {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  color: white;
+}

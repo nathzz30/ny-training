@@ -1,0 +1,46 @@
+body {
+  display: block;
+}
+
+/* .layout-recipe {
+    background-color: #e6e6e6;
+} */
+
+.wrapper {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1270px;
+}
+
+.bottom {
+  margin-top: 50px;
+}
+
+.main {
+  width: 70%;
+  margin-bottom: 60px;
+  background-color: white;
+  margin-right: 10px;
+}
+
+.sidebar {
+  width: 28%;
+  background-color: white;
+  max-height: 1136.13px;
+}
+
+.recipe {
+  display: inline-block;
+  margin: 5px;
+  width: 100%;
+}
+
+.recipeRelated {
+  display: block;
+  margin: 5px;
+  width: 100%;
+}
+
+.kiln-placeholder {
+  max-height: 700px;
+}

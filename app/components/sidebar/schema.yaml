@@ -1,0 +1,52 @@
+_version: 1.0
+
+_description: |
+  A basic sidebar component.
+
+_confirmRemoval: true
+
+recommendedRecipe:
+  _has:
+    input: complex-list
+    collapse: title
+    filter: true
+    props:
+      -
+        prop: title
+        _label: Title
+        _has:
+          input: text
+      -
+        prop: likes
+        _label: Likes
+        _has:
+          input: text
+          type: numbers
+      -
+        prop: urlImg
+        _label: Image
+        _has: 
+          input: text
+      -
+        prop: urlRecipe
+        _label: Recipe URL
+        _has:
+          input: text
+      -
+        prop: author
+        _label: Recipe Author 
+        _has:
+          input: text
+
+adSizes:
+  _label: Ad Sizes
+  _has: text
+  _placeholder:
+    text: Ad (${adSizes})
+    height: 100px
+    permanent: true
+
+_groups:
+  settings:
+    fields:
+      - recommendedRecipe

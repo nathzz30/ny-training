@@ -26,3 +26,10 @@ _pages:
       - /_components/meta-keywords/instances/homepage
       - /_components/meta-authors/instances/homepage
     main: []
+  main-recipe:
+    layout: /_layouts/layout-recipe/instances/main-recipe
+    main:
+      - /_components/main-recipe/instances/recipe-sample
+    sidebar:
+      - /_components/sidebar/instances/new
+    head: []

@@ -1,7 +1,10 @@
 <div data-uri="{{ default _ref _self }}" class="footer" data-editable="settings">
 
   <ul class="footer-social" data-editable="footerLinks">
-    {{> component-list footerLinks }}
+    {{!-- {{> component-list footerLinks }} --}}
+    {{#each footerLinks}}
+      <a href="{{url}}"><span>{{{ text }}}</span></a>
+    {{/each}}
   </ul>
 
   <div class="copyright">

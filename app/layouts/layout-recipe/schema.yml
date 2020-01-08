@@ -1,5 +1,5 @@
 _description: |
-  A two column layout with special styling for our articles. Used for:
+  A layout with special styling for our recipes. Used for:
 
 head:
   _componentList:
@@ -29,15 +29,23 @@ secondaryHeader:
     include: []
 
 main:
+  _placeholder:
+    text: Main Section
+    height: 600px
   _componentList:
     page: true
-    include:
-      - article
-      - paragraph
-      - subheader
-      - tags
-      - divider
-      - nathzz
+    include: 
+      - recipe
+      - recipesRelated
+
+sidebar:
+  _placeholder:
+    text: Side Section
+    height: 600px
+  _componentList:
+    include: 
+      - sidebar
+
 primary:
   _componentList:
     include: []
