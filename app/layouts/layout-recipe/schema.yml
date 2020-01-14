@@ -21,12 +21,6 @@ headLayout:
 top:
   _componentList:
     include: []
-pageHeader:
-  _componentList:
-    include: []
-secondaryHeader:
-  _componentList:
-    include: []
 
 main:
   _placeholder:
@@ -46,16 +40,11 @@ sidebar:
     include: 
       - sidebar
 
-primary:
-  _componentList:
-    include: []
-secondary:
-  _componentList:
-    include: []
 bottom:
   _componentList:
     include:
       - footer
+      
 foot:
   _componentList:
     invisible: true

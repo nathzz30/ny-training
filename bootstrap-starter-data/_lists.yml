@@ -5,5 +5,10 @@ _lists:
       children:
         - id: new-standard
           title: Article
+    - id: recipes
+      title: '2. Recipes'
+      children:
+        - id: main-recipe
+          title: Recipe
   tags: []
   authors: []

@@ -3,14 +3,18 @@ _description: |
 
 _confirmRemoval: true
 
-myList:
+recipe:
   _placeholder:
-    height: 600px
-  _componentList:
+    height: 400px
+  _component:
     page: true
     include:
-      - nathzz
-      - paragraph
-      - sidebar
-      - recipes-related
       - recipe
+
+recipesRelated:
+  _placeholder:
+    height: 180px
+  _component:
+    page: true
+    include:
+      - recipesRelated

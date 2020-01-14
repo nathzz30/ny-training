@@ -184,16 +184,17 @@ _components:
         content:
           -
             _ref: /_components/paragraph/instances/new
+          -
+            _ref: /_components/paragraph/instances/new
         tags:
           _ref: /_components/tags/instances/sample
   main-recipe:
     instances:
       recipe-sample:
-        myList:
-          -
-            _ref: /_components/recipe/instances/recipe
-          -
-            _ref: /_components/recipesRelated/instances/new
+        recipe:
+          _ref: /_components/recipe/instances/recipe
+        recipesRelated:
+          _ref: /_components/recipesRelated/instances/new
       test:
         myList: 
           -
@@ -203,6 +204,7 @@ _components:
   recipe:
     instances:
       recipe:
+        slug: ''
         type: ''
         descriptionRecipe: '"This relish has a great flavor especially with the addition of celery! Chopped pecans or walnuts can be added if desired."'
         author: 'Karen Dunn'
