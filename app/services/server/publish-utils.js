@@ -63,6 +63,15 @@ function guaranteeHeadline(mainComponent) {
 }
 
 /**
+ * @param {object} mainComponent
+ */
+function guaranteeTitle(mainComponent) {
+  if (!mainComponent.recipeTitle) {
+    throw new Error('Client: missing recipe title');
+  }
+}
+
+/**
  * Logic about which date to use for a published article
  * @param {object} latest
  * @param {object} [published]
@@ -115,6 +124,39 @@ function getMainComponentFromRef(componentReference, locals) {
 }
 
 /**
+ * gets a main component from the db by its ref, ensuring primary headline and date exist
+ * @param {string} componentReference
+ * @param {object} locals
+ * @returns {Promise}
+ */
+function getMainComponentRecipeFromRef(componentReference, locals) {
+  return bluebird
+    .all([
+      db.get(componentReference).catch(error => {
+        log('error', `Failure to fetch component at ${componentReference}`);
+        throw error;
+      }),
+      db.get(componentReference + '@published').catch(_.noop)
+    ])
+    .spread((component, publishedComponent) => {
+      let re = _.get(component, 'recipe._ref', '');
+      if (re) {
+        return db
+          .get(re)
+          .then(data => {
+            guaranteeTitle(data);
+            guaranteeLocalDate(data, publishedComponent, locals);
+            return data;
+          })
+          .catch(error => {
+            log('error', `Failure to fetch component at ${componentReference}`);
+            throw error;
+          });
+      }
+    });
+}
+
+/**
  * Return the URL prefix of a site.
  * @param {Object} site
  * @returns {String}
@@ -136,7 +178,6 @@ function getUrlPrefix(site) {
  */
 function getUrlOptions(component, locals) {
   const urlOptions = {};
-
   urlOptions.prefix = getUrlPrefix(locals.site);
   urlOptions.slug = component.slug || sanitize.cleanSlug(component.headline);
 
@@ -151,10 +192,36 @@ function getUrlOptions(component, locals) {
   return urlOptions;
 }
 
+/**
+ * returns an object to be consumed by url patterns
+ * @param {object} component
+ * @param {object} locals
+ * @returns {{prefix: string, section: string, yyyy: string, mm: string, slug: string}}
+ * @throws {Error} if there's no date, slug, or prefix
+ */
+function getUrlOptionsRecipe(component, locals) {
+  const urlOptions = {};
+  urlOptions.prefix = getUrlPrefix(locals.site);
+  urlOptions.slug = sanitize.cleanSlug(component.recipeTitle);
+
+  if (!(locals.site && locals.date && urlOptions.slug)) {
+    throw new Error(
+      `Client: Cannot generate a canonical url at prefix: ${locals.site.prefix} slug: ${
+        urlOptions.slug
+      } date: ${locals.date}`
+    );
+  }
+
+  return urlOptions;
+}
+
 module.exports.getComponentReference = getComponentReference;
 module.exports.getMainComponentFromRef = getMainComponentFromRef;
+module.exports.getMainComponentRecipeFromRef = getMainComponentRecipeFromRef;
 module.exports.getUrlOptions = getUrlOptions;
+module.exports.getUrlOptionsRecipe = getUrlOptionsRecipe;
 module.exports.getUrlPrefix = getUrlPrefix;
 module.exports.getPublishDate = getPublishDate;
 // URL patterns below need to be handled by the site's index.js
 module.exports.slugUrlPattern = o => `${o.prefix}/article/${o.slug}.html`; // http://localhost/article/x.html
+module.exports.slugUrlPatternRecipe = o => `${o.prefix}/recipe/${o.slug}.html`; // http://localhost/recipe/x.html
