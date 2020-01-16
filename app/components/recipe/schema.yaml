@@ -1,4 +1,4 @@
-_version: 1.3
+_version: 1.4
 
 _description: |
   A basic recipe component.
@@ -202,12 +202,39 @@ img4:
     type: url
     help: Image URL
 
+madeIt:
+  _label: Cant Made It
+  _has:
+    type: number
+
+reviews:
+  _label: Cant of Reviews
+  _has:
+    type: number
+
+photos:
+  _label: Cant of Photos
+  _has:
+    type: number
+
 tags:
   _component:
     include:
       - tags
 normalizedTags:
   _subscribe: normalizedTags
+
+recipeDate:
+  _has:
+    help: This variable is to save the date when the recipe was published.
+
+recipeTime:
+  _has:
+    help: This variable is to save the time when the recipe was published.
+
+canonicalUrl:
+  _has:
+    help: This variable is to save the time when the recipe was published.
 
 _groups:
   settings:

@@ -235,6 +235,9 @@ _components:
         nutriFacts: []
         tags:
           _ref: /_components/tags/instances/recipe
+        madeIt: '73'
+        reviews: '37'
+        photos: '3'
 
  
       test:

@@ -1,2 +1,14 @@
 _doc:
   dynamic: true
+  properties:
+    imgBigUrl:
+      type: keyword
+    recipeTitle:
+      type: keyword
+    madeIt:
+      type: keyword
+    canonicalUrl:
+      type: keyword
+    tags:
+      type: keyword
+

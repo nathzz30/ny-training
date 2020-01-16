@@ -1,27 +1,32 @@
-const amphoraSearch = require('amphora-search');
-const { getComponentName } = require('clayutils');
+const amphoraSearch = require('amphora-search'),
+  highland = require('highland'),
+  { getComponentName } = require('clayutils');
+
+const elasticIndex = 'local_index_v1';
 
 amphoraSearch.subscribe('save').through(handlerSave);
 
 function handlerSave(stream) {
-  console.log(stream);
-  return (
-    stream
-      .merge()
-      // .each(op => {
-      // 	console.log("op: ", op);
-      // 	return op;
-      // })
-      .filter(op => getComponentName(op.key) === 'recipe')
-      .each(console.log)
-  );
-  // .filter(op => {
-  // 	console.log("This is the OP that is a Recipe >>>>> ",getComponentName(op.key) === "recipe");
-  // 	// return getComponentName(op.key) === "recipe";
-
-  // });
-}
-
-function handlerStream(stream) {
-  return stream.collect().map();
+  return stream
+    .map(opstream => {
+      return opstream
+        .filter(op => getComponentName(op.key) === 'recipe' && op.key.includes('@published'))
+        .collect()
+        .compact();
+    })
+    .parallel(1)
+    .flatten()
+    .map(element => {
+      const { recipeTitle, canonicalUrl, imgBigUrl, madeIt } = JSON.parse(element.value);
+      return {
+        _ref: element.key,
+        recipeTitle,
+        canonicalUrl,
+        imgBigUrl,
+        madeIt
+      };
+    })
+    .flatMap(op => {
+      return highland(amphoraSearch.elastic.put(elasticIndex, op._ref, op).then(() => op._ref));
+    });
 }

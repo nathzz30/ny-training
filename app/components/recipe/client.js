@@ -2,6 +2,6 @@
 
 const sharePopUp = require('../../services/client/sharePopup');
 
-module.exports = el => {
-  console.log('EL: ', el);
-};
+// module.exports = el => {
+//   console.log('EL: ', el);
+// };

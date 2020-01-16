@@ -15,7 +15,7 @@ module.exports = (ref, data) => {
   data.ingredients = [];
   data.nutriFacts = [];
 
-  if (data.ingredientsList.length) {
+  if (data.ingredientsList && data.ingredientsList.length) {
     data.ingredientsList.forEach(element => {
       let [cantMeasure, unitMeasure, ingredient, instructions] = element.split(' ');
 
@@ -30,7 +30,7 @@ module.exports = (ref, data) => {
 
   delete data.ingredientsList;
 
-  if (data.nutriFactsList.length) {
+  if (data.nutriFactsList && data.nutriFactsList.length) {
     data.nutriFactsList.forEach(element => {
       let [cantMeasure, unitMeasure, fact] = element.split(' ');
 
