@@ -17,16 +17,18 @@ function handlerSave(stream) {
     .parallel(1)
     .flatten()
     .map(element => {
-      const { recipeTitle, canonicalUrl, imgBigUrl, madeIt } = JSON.parse(element.value);
+      const { recipeTitle, canonicalUrl, imgBigUrl, cantMadeIt } = JSON.parse(element.value);
       return {
         _ref: element.key,
         recipeTitle,
         canonicalUrl,
         imgBigUrl,
-        madeIt
+        cantMadeIt
       };
     })
     .flatMap(op => {
       return highland(amphoraSearch.elastic.put(elasticIndex, op._ref, op).then(() => op._ref));
     });
+  // .each()
+  // .error();
 }

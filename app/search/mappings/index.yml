@@ -5,7 +5,7 @@ _doc:
       type: keyword
     recipeTitle:
       type: keyword
-    madeIt:
+    cantMadeIt:
       type: keyword
     canonicalUrl:
       type: keyword

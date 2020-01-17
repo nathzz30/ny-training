@@ -130,6 +130,7 @@ function getMainComponentFromRef(componentReference, locals) {
  * @returns {Promise}
  */
 function getMainComponentRecipeFromRef(componentReference, locals) {
+  console;
   return bluebird
     .all([
       db.get(componentReference).catch(error => {
@@ -139,7 +140,8 @@ function getMainComponentRecipeFromRef(componentReference, locals) {
       db.get(componentReference + '@published').catch(_.noop)
     ])
     .spread((component, publishedComponent) => {
-      let re = _.get(component, 'recipe._ref', '');
+      let recipe = _.get(component, 'recipe', '').pop();
+      let re = _.get(recipe, '_ref', '');
       if (re) {
         return db
           .get(re)
