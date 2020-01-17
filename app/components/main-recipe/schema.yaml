@@ -6,7 +6,7 @@ _confirmRemoval: true
 recipe:
   _placeholder:
     height: 400px
-  _component:
+  _componentList:
     page: true
     include:
       - recipe
@@ -14,7 +14,7 @@ recipe:
 recipesRelated:
   _placeholder:
     height: 180px
-  _component:
+  _componentList:
     page: true
     include:
       - recipesRelated

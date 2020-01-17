@@ -192,9 +192,9 @@ _components:
     instances:
       recipe-sample:
         recipe:
-          _ref: /_components/recipe/instances/recipe
+          - _ref: /_components/recipe/instances/recipe
         recipesRelated:
-          _ref: /_components/recipesRelated/instances/new
+          - _ref: /_components/recipesRelated/instances/new
       test:
         myList: 
           -
@@ -235,9 +235,9 @@ _components:
         nutriFacts: []
         tags:
           _ref: /_components/tags/instances/recipe
-        madeIt: '73'
-        reviews: '37'
-        photos: '3'
+        cantMadeIt: '73'
+        cantReviews: '37'
+        cantPhotos: '3'
 
  
       test:

@@ -12,9 +12,9 @@
             <img class="score-stars-recipe" src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/half-star-2015.svg">
           </div>
           <div data-editable="settings" class="infoScore">
-            <a data-editable="settings" href="/" class="made">{{madeIt}} made it</a>
-            <a data-editable="settings" href="/" class="reviews">{{reviews}} reviews</a>
-            <a data-editable="settings" href="/" class="photos">{{photos}} photos</a>
+            <a data-editable="settings" href="/" class="made">{{ cantMadeIt }} made it</a>
+            <a data-editable="settings" href="/" class="reviews">{{ cantReviews }} reviews</a>
+            <a data-editable="settings" href="/" class="photos">{{ cantPhotos}} photos</a>
           </div>
         </div>
         {{#if author }}
@@ -96,7 +96,7 @@
           </p>
           <button class="nutri-made-it"><a class="made-it">{{{ read 'public/media/sites/claydemo/iconmonstr-eat-7-copy.svg' }}}</a> I made it!</button>
         </div>
-        {{> tags tags}}
+        <div data-editable="tags">{{> tags tags}}</div>
       {{/if}}
       <div class="socials">
         <p>Share</p>

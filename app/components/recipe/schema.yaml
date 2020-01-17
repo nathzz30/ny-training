@@ -1,4 +1,4 @@
-_version: 1.4
+_version: 1.5
 
 _description: |
   A basic recipe component.
@@ -202,20 +202,20 @@ img4:
     type: url
     help: Image URL
 
-madeIt:
-  _label: Cant Made It
+cantMadeIt:
+  _label: Cant of Made It
   _has:
-    type: number
+    input: text
 
-reviews:
+cantReviews:
   _label: Cant of Reviews
   _has:
-    type: number
+    input: text
 
-photos:
+cantPhotos:
   _label: Cant of Photos
   _has:
-    type: number
+    input: text
 
 tags:
   _component:
@@ -242,6 +242,9 @@ _groups:
       - recipeTitle
       - descriptionRecipe
       - author
+      - cantMadeIt
+      - cantReviews
+      - cantPhotos
       - imgBigUrl (Images)
       - img1 (Images)
       - img2 (Images)
