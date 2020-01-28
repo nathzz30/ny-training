@@ -130,7 +130,6 @@ function getMainComponentFromRef(componentReference, locals) {
  * @returns {Promise}
  */
 function getMainComponentRecipeFromRef(componentReference, locals) {
-  console;
   return bluebird
     .all([
       db.get(componentReference).catch(error => {
