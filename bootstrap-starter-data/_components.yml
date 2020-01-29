@@ -238,7 +238,6 @@ _components:
         cantMadeIt: '73'
         cantReviews: '37'
         cantPhotos: '3'
-
  
       test:
         type: ''
@@ -272,6 +271,7 @@ _components:
           https://www.allrecipes.com/recipe/152239/cranberry-apple-and-fresh-ginger-chutney/?internalSource=similar_recipe_banner&referringId=22950&referringContentType=Recipe&clickId=simslot_4 * 
           91 * https://images.media-allrecipes.com/userphotos/150x150/1747986.jpg'
         relatedRecipe: []
+        recipeNormalizedTagsValue: []
   sidebar:
     instances:
       new:
