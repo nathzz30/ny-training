@@ -9,6 +9,5 @@ _doc:
       type: keyword
     canonicalUrl:
       type: keyword
-    tags:
+    normalizedTags:
       type: keyword
-
