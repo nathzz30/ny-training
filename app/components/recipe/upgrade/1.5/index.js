@@ -28,8 +28,6 @@ module.exports = (ref, data) => {
     });
   }
 
-  delete data.ingredientsList;
-
   if (data.nutriFactsList && data.nutriFactsList.length) {
     data.nutriFactsList.forEach(element => {
       let [cantMeasure, unitMeasure, fact] = element.split(' ');
@@ -41,8 +39,6 @@ module.exports = (ref, data) => {
       });
     });
   }
-
-  delete data.nutriFactsList;
 
   return data;
 };

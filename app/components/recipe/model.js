@@ -1,6 +1,7 @@
 'use strict';
 
 const _get = require('lodash/get'),
+  _ = require('lodash'),
   dateFormat = require('date-fns/format'),
   dateParse = require('date-fns/parse'),
   utils = require('../../services/universal/utils'),
@@ -36,7 +37,7 @@ function setCanonicalUrl(data, locals) {
   }
 }
 
-module.exports.save = function(uri, data, locals) {
+module.exports.render = function(uri, data, locals) {
   // first, let's get all the synchronous stuff out of the way:
   // setting fields, etc
   formatDate(data, locals);
