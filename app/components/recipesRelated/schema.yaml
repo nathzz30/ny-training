@@ -1,4 +1,4 @@
-_version: 1.1
+_version: 1.3
 
 _description: |
   A basic recipes Related component.
@@ -32,6 +32,16 @@ relatedRecipe:
         _label: Recipe URL
         _has:
           input: text
+      -
+        prop: normalizedTags
+        _label: normalizedTags from tags component
+        _has:
+          input: text
+
+recipeNormalizedTagsValue:
+  _subscribe: normalizedTags
+  _has:
+    help: This variable is to save the value of the normalizedTags
 
 _groups:
   settings:
