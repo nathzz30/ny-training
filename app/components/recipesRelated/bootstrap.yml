@@ -1,6 +1,4 @@
 _components:
   recipesRelated:
-    title: ''
-    likes: ''
-    urlImg: ''
-    urlRecipe: ''
+    []
+      

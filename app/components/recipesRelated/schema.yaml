@@ -39,7 +39,7 @@ relatedRecipe:
           input: text
 
 recipeNormalizedTagsValue:
-  _subscribe: normalizedTags
+  _subscribe: recipeNormalizedTagsValue
   _has:
     help: This variable is to save the value of the normalizedTags
 
