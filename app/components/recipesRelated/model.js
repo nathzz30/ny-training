@@ -1,8 +1,9 @@
 'use strict';
 
-const { search } = require('../../services/server/elastic');
+const { search, existsIndex } = require('../../services/server/elastic');
 
 module.exports.render = function(uri, data, locals) {
+  const index = 'local_recipes_index';
   let tagsQuery = '';
   data.recipeNormalizedTagsValue.forEach(element => {
     element == 'recipe' ? tagsQuery : (tagsQuery += ' ' + element);
@@ -17,25 +18,31 @@ module.exports.render = function(uri, data, locals) {
 
   data.relatedRecipe = [];
 
-  return search('local_recipes_index', query)
-    .then(({ hits }) => hits.hits)
-    .then(hits => hits.map(({ _source }) => _source))
-    .then(source => {
-      source.forEach(recipe => {
-        let obj = {
-          title: '',
-          likes: '',
-          urlImg: '',
-          urlRecipe: ''
-        };
-        obj.title = recipe.recipeTitle;
-        obj.likes = recipe.cantMadeIt;
-        obj.urlImg = recipe.imgBigUrl;
-        obj.urlRecipe = recipe.canonicalUrl;
+  return existsIndex(index).then(existsIndex => {
+    if (existsIndex) {
+      return search(index, query)
+        .then(({ hits }) => hits.hits)
+        .then(hits => hits.map(({ _source }) => _source))
+        .then(source => {
+          source.forEach(recipe => {
+            let obj = {
+              title: '',
+              likes: '',
+              urlImg: '',
+              urlRecipe: ''
+            };
+            obj.title = recipe.recipeTitle;
+            obj.likes = recipe.cantMadeIt;
+            obj.urlImg = recipe.imgBigUrl;
+            obj.urlRecipe = recipe.canonicalUrl;
 
-        data.relatedRecipe.push(obj);
-      });
+            data.relatedRecipe.push(obj);
+          });
 
+          return data;
+        });
+    } else {
       return data;
-    });
+    }
+  });
 };
