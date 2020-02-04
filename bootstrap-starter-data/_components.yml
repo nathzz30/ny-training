@@ -235,9 +235,9 @@ _components:
         nutriFacts: []
         tags:
           _ref: /_components/tags/instances/recipe
-        cantMadeIt: '73'
-        cantReviews: '37'
-        cantPhotos: '3'
+        likes: '73'
+        reviews: '37'
+        photos: '3'
  
       test:
         type: ''

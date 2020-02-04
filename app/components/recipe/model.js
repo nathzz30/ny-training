@@ -37,11 +37,25 @@ function setCanonicalUrl(data, locals) {
   }
 }
 
+/**
+ * formatting the numbers to present on the component
+ * @param {object} data
+ */
+function formattingNumber(data) {
+  data.likesFormatting =
+    parseInt(data.likes) / 1000 >= 1 ? parseInt(data.likes) / 1000 + 'k' : data.likes;
+  data.reviewsFormatting =
+    parseInt(data.reviews) / 1000 >= 1 ? parseInt(data.reviews) / 1000 + 'k' : data.reviews;
+  data.photosFormatting =
+    parseInt(data.photos) / 1000 >= 1 ? parseInt(data.photos) / 1000 + 'k' : data.photos;
+}
+
 module.exports.render = function(uri, data, locals) {
   // first, let's get all the synchronous stuff out of the way:
   // setting fields, etc
   formatDate(data, locals);
   setCanonicalUrl(data, locals);
+  formattingNumber(data);
 
   return data;
 };

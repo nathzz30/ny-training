@@ -5,9 +5,11 @@ _doc:
       type: keyword
     recipeTitle:
       type: keyword
-    cantMadeIt:
+    likes:
       type: keyword
     canonicalUrl:
       type: keyword
     normalizedTags:
+      type: keyword
+    author:
       type: keyword

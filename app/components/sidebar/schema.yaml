@@ -37,6 +37,11 @@ recommendedRecipe:
         _label: Recipe Author 
         _has:
           input: text
+      -
+        prop: likesFormatting
+        _label: likes with a format
+        _has:
+          input: text
 
 adSizes:
   _label: Ad Sizes

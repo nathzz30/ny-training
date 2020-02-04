@@ -32,7 +32,7 @@ module.exports.render = function(uri, data, locals) {
               urlRecipe: ''
             };
             obj.title = recipe.recipeTitle;
-            obj.likes = recipe.cantMadeIt;
+            obj.likes = recipe.likes;
             obj.urlImg = recipe.imgBigUrl;
             obj.urlRecipe = recipe.canonicalUrl;
 

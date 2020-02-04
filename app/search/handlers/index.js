@@ -17,7 +17,7 @@ function handlerSave(stream) {
     .parallel(1)
     .flatten()
     .map(element => {
-      const { recipeTitle, canonicalUrl, imgBigUrl, cantMadeIt, normalizedTags } = JSON.parse(
+      const { recipeTitle, canonicalUrl, imgBigUrl, likes, normalizedTags, author } = JSON.parse(
         element.value
       );
       return {
@@ -25,8 +25,9 @@ function handlerSave(stream) {
         recipeTitle,
         canonicalUrl,
         imgBigUrl,
-        cantMadeIt,
-        normalizedTags
+        likes,
+        normalizedTags,
+        author
       };
     })
     .flatMap(op => {

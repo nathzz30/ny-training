@@ -1,4 +1,4 @@
-_version: 1.5
+_version: 1.6
 
 _description: |
   A basic recipe component.
@@ -152,6 +152,21 @@ author:
   _has:
     input: text
 
+photosFormatting:
+  _label: Quantity of photos
+  _has:
+    input: text
+
+likesFormatting:
+  _label: Quantity of likes
+  _has:
+    input: text
+
+reviewsFormatting:
+  _label: Quantity of reviews
+  _has:
+    input: text
+
 imgBigUrl:
   _label: Principal Image
   _placeholder:
@@ -202,18 +217,18 @@ img4:
     type: url
     help: Image URL
 
-cantMadeIt:
-  _label: Cant of Made It
+likes:
+  _label: Quantity of likes
   _has:
     input: text
 
-cantReviews:
-  _label: Cant of Reviews
+reviews:
+  _label: Quantity of Reviews
   _has:
     input: text
 
-cantPhotos:
-  _label: Cant of Photos
+photos:
+  _label: Quantity of Photos
   _has:
     input: text
 
@@ -242,9 +257,9 @@ _groups:
       - recipeTitle
       - descriptionRecipe
       - author
-      - cantMadeIt
-      - cantReviews
-      - cantPhotos
+      - likes
+      - reviews
+      - photos
       - imgBigUrl (Images)
       - img1 (Images)
       - img2 (Images)
