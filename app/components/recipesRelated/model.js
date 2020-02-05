@@ -2,16 +2,34 @@
 
 const { search, existsIndex } = require('../../services/server/elastic');
 
+function formattingNumber(data) {
+  data.likes = parseInt(data.likes) / 1000 >= 1 ? parseInt(data.likes) / 1000 + 'k' : data.likes;
+}
+
 module.exports.render = function(uri, data, locals) {
   const index = 'local_recipes_index';
+  const [canonicalUrlRecipe] = locals.url.split('?');
   let tagsQuery = '';
   data.recipeNormalizedTagsValue.forEach(element => {
     element == 'recipe' ? tagsQuery : (tagsQuery += ' ' + element);
   });
   const query = {
     query: {
-      match: {
-        normalizedTags: tagsQuery
+      bool: {
+        must: [
+          {
+            match: {
+              normalizedTags: tagsQuery
+            }
+          }
+        ],
+        must_not: [
+          {
+            match_phrase: {
+              canonicalUrl: canonicalUrlRecipe
+            }
+          }
+        ]
       }
     }
   };
@@ -19,30 +37,24 @@ module.exports.render = function(uri, data, locals) {
   data.relatedRecipe = [];
 
   return existsIndex(index).then(existsIndex => {
-    if (existsIndex) {
-      return search(index, query)
-        .then(({ hits }) => hits.hits)
-        .then(hits => hits.map(({ _source }) => _source))
-        .then(source => {
-          source.forEach(recipe => {
-            let obj = {
-              title: '',
-              likes: '',
-              urlImg: '',
-              urlRecipe: ''
-            };
-            obj.title = recipe.recipeTitle;
-            obj.likes = recipe.likes;
-            obj.urlImg = recipe.imgBigUrl;
-            obj.urlRecipe = recipe.canonicalUrl;
+    if (!existsIndex) return data;
 
-            data.relatedRecipe.push(obj);
-          });
-
-          return data;
+    return search(index, query)
+      .then(({ hits }) => hits.hits)
+      .then(hits => hits.map(({ _source }) => _source))
+      .then(source => {
+        source.forEach(recipe => {
+          let obj = {
+            title: recipe.recipeTitle,
+            likes: recipe.likes,
+            urlImg: recipe.imgBigUrl,
+            urlRecipe: recipe.canonicalUrl
+          };
+          formattingNumber(obj);
+          data.relatedRecipe.push(obj);
         });
-    } else {
-      return data;
-    }
+
+        return data;
+      });
   });
 };
