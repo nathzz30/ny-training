@@ -39,13 +39,12 @@ module.exports.render = function(uri, data, locals) {
       .then(hits => hits.map(({ _source }) => _source))
       .then(source => {
         data.relatedRecipe = source.map(recipe => {
-          let obj = {
+          return {
             title: recipe.recipeTitle,
             likes: formattingNumber(recipe.likes),
             urlImg: recipe.imgBigUrl,
             urlRecipe: recipe.canonicalUrl
           };
-          return obj;
         });
         return data;
       });
