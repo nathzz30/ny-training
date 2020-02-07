@@ -172,6 +172,16 @@ function urlToCanonicalUrl(url) {
 }
 
 /**
+ * Receive a Number and formatting
+ * e.g. `23300` becomes `23.3k`
+ * @param {number} number
+ * @returns {string}
+ */
+function formattingNumber(number) {
+  return parseInt(number) / 1000 >= 1 ? parseInt(number) / 1000 + 'k' : number;
+}
+
+/**
  * prefixes a given elastic index depending on the current environment
  * e.g. `published-articles` becomes `local_published-articles`
  * @param {string} indexString
@@ -200,3 +210,4 @@ module.exports.ensurePublishedVersion = ensurePublishedVersion;
 module.exports.isInstance = isInstance;
 module.exports.urlToCanonicalUrl = urlToCanonicalUrl;
 module.exports.prefixElasticIndex = prefixElasticIndex;
+module.exports.formattingNumber = formattingNumber;

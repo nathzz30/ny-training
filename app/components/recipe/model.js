@@ -41,13 +41,10 @@ function setCanonicalUrl(data, locals) {
  * formatting the numbers to present on the component
  * @param {object} data
  */
-function formattingNumber(data) {
-  data.likesFormatting =
-    parseInt(data.likes) / 1000 >= 1 ? parseInt(data.likes) / 1000 + 'k' : data.likes;
-  data.reviewsFormatting =
-    parseInt(data.reviews) / 1000 >= 1 ? parseInt(data.reviews) / 1000 + 'k' : data.reviews;
-  data.photosFormatting =
-    parseInt(data.photos) / 1000 >= 1 ? parseInt(data.photos) / 1000 + 'k' : data.photos;
+function formatting(data) {
+  data.likesFormatting = utils.formattingNumber(data.likes);
+  data.reviewsFormatting = utils.formattingNumber(data.reviews);
+  data.photosFormatting = utils.formattingNumber(data.photos);
 }
 
 module.exports.render = function(uri, data, locals) {
@@ -55,7 +52,7 @@ module.exports.render = function(uri, data, locals) {
   // setting fields, etc
   formatDate(data, locals);
   setCanonicalUrl(data, locals);
-  formattingNumber(data);
+  formatting(data);
 
   return data;
 };
