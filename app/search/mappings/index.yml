@@ -6,7 +6,7 @@ _doc:
     recipeTitle:
       type: keyword
     likes:
-      type: keyword
+      type: integer
     canonicalUrl:
       type: keyword
     normalizedTags:

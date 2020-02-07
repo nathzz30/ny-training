@@ -44,9 +44,9 @@ module.exports = (ref, data) => {
   data.reviewsFormatting = data.reviewsFormatting ? data.reviewsFormatting : '';
   data.photosFormatting = data.photosFormatting ? data.photosFormatting : '';
 
-  // data.likesFormatting = parseInt(data.likes)%1000 >= 0 ? (parseInt(data.likes)/1000 ) + "k" : data.likes;
-  // data.reviewsFormatting = parseInt(data.reviews)%1000 >= 0 ? (parseInt(data.reviews)/1000 ) + "k" : data.reviews;
-  // data.photosFormatting = parseInt(data.photos)%1000 >= 0 ? (parseInt(data.photos)/1000 ) + "k" : data.photos;
+  data.likes = parseInt(data.likes);
+  data.reviews = parseInt(data.reviews);
+  data.photos = parseInt(data.photos);
 
   return data;
 };

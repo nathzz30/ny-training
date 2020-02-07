@@ -8,10 +8,29 @@ function formattingNumber(data) {
 
 module.exports.render = function(uri, data, locals) {
   const index = 'local_recipes_index';
+  const [canonicalUrlRecipe] = locals.url.split('?');
+
   const query = {
+    sort: [
+      {
+        likes: {
+          order: 'desc'
+        }
+      }
+    ],
     query: {
-      match_all: {}
-    }
+      bool: {
+        must_not: [
+          {
+            match_phrase: {
+              canonicalUrl: canonicalUrlRecipe
+            }
+          }
+        ]
+      }
+    },
+    from: 0,
+    size: 2
   };
 
   return existsIndex(index).then(existsIndex => {
@@ -22,14 +41,7 @@ module.exports.render = function(uri, data, locals) {
         .then(source => {
           data.recommendedRecipe = [];
 
-          let recipeLikes = source.map(recipe => recipe.likes);
-          recipeLikes = recipeLikes.sort(function(a, b) {
-            return b - a;
-          });
-          let recipes = source.filter(recipe => {
-            return recipe.likes === recipeLikes[0] || recipe.likes === recipeLikes[1];
-          });
-          recipes.forEach(recipe => {
+          source.forEach(recipe => {
             let obj = {
               title: recipe.recipeTitle,
               likes: recipe.likes,

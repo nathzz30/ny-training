@@ -220,17 +220,17 @@ img4:
 likes:
   _label: Quantity of likes
   _has:
-    input: text
+    input: number
 
 reviews:
   _label: Quantity of Reviews
   _has:
-    input: text
+    input: number
 
 photos:
   _label: Quantity of Photos
   _has:
-    input: text
+    input: number
 
 tags:
   _component:
