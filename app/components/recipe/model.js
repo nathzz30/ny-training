@@ -53,6 +53,6 @@ module.exports.render = function(uri, data, locals) {
   formatDate(data, locals);
   setCanonicalUrl(data, locals);
   formatting(data);
-
+  console.log('data recipe >>>>>> ', data);
   return data;
 };

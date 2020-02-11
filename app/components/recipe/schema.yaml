@@ -1,4 +1,4 @@
-_version: 1.6
+_version: 1.7
 
 _description: |
   A basic recipe component.
@@ -167,6 +167,27 @@ reviewsFormatting:
   _has:
     input: text
 
+images:
+  _has:
+    input: complex-list
+    props:
+      -
+        prop: bigImage
+        _label: ImageSelected
+        _has:
+          input: text
+      -
+        prop: littleImage
+        _label: image
+        _has:
+          input: text
+      -
+        prop: status
+        _label: status
+        _has:
+          input: text
+          
+
 imgBigUrl:
   _label: Principal Image
   _placeholder:
@@ -260,11 +281,7 @@ _groups:
       - likes
       - reviews
       - photos
-      - imgBigUrl (Images)
-      - img1 (Images)
-      - img2 (Images)
-      - img3 (Images)
-      - img4 (Images)
+      - images (Images)
       - stepInfoRecipe (Directions)
       - readyTimeRecipe (Directions)
       - preparationTimeStep (Directions)
