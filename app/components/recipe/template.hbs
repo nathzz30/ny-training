@@ -27,19 +27,16 @@
           </div>
         {{/if}}
       </div>
-      {{#if imgBigUrl}}
         <div class="images">
-          <div class="imgActive2">
-            <img src={{ imgBigUrl }} class="imgActive2">
-          </div>
-          <div class="imagesRelated">
-            <img src={{ img1 }} class="carousel">
-            <img src={{ img2 }} class="carousel">
-            <img src={{ img3 }} class="carousel">
-            <img src={{ img4 }} class="carousel">
-          </div>
+          {{#each images}}
+            {{#if status}}
+            <div class="imgActive2">
+              <img src={{ bigImage }} class="imgActive2">
+            </div>
+            {{/if}}
+            <img src={{ littleImage }} class="carousel">
+          {{/each}}
         </div>
-      {{/if}}
       <div class="btns">
         <button class="btn"><a class="svg">{{{ read 'public/media/sites/claydemo/like.svg' }}}</a> Save</button>
         <button class="btn"><a class="svg">{{{ read 'public/media/sites/claydemo/iconmonstr-eat-7.svg' }}}</a> Made It</button>
