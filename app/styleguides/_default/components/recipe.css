@@ -84,32 +84,31 @@ a {
   text-align: center;
 }
 
-.images {
+.carousel {
   display: inline-block;
-  height: auto;
-  max-width: 100%;
-  width: 54%;
+}
+
+.image {
+  display: inline-block;
+  height: 50px;
+  width: 80px;
+}
+
+.active {
+  height: 270px;
+  width: 470px;
 }
 
 .imgActive {
-  height: auto;
-  object-fit: cover;
-  width: 100%;
-}
-
-.imgActive2 {
-  max-height: 270px;
-  object-fit: cover;
-  width: 100%;
+  display: inline-block;
 }
 
 .imagesRelated {
   display: inline-block;
 }
 
-.carousel {
-  width: 20%;
-  margin-top: 5px;
+.hidden {
+  display: none;
 }
 
 .btns {
