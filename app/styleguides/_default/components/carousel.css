@@ -12,6 +12,13 @@
   width: 100%;
   left: 0;
   align-items: center;
+  cursor: pointer;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: gray;
+  opacity: 0.5;
 }
 
 .image {
@@ -19,6 +26,7 @@
   height: 50px;
   opacity: 0.6;
   width: 80px;
+  cursor: pointer;
 }
 
 .image:hover {

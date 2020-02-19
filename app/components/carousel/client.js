@@ -1,11 +1,11 @@
 'use strict';
 
-function getIndex(n, arr, current) {
+function getIndex(n, arrLength, current) {
   current += n;
   if (current < 0) {
-    current = arr.length - 1;
+    current = arrLength - 1;
   }
-  if (current == arr.length) {
+  if (current == arrLength) {
     current = 0;
   }
   return current;
@@ -40,12 +40,38 @@ module.exports = () => {
     let divImages = document.querySelector('.images');
     divImages.classList.add('hidden');
     document.querySelector('.prev').addEventListener('click', e => {
-      current = getIndex(-1, images, current);
+      current = getIndex(-1, images.length, current);
       activeImage[0].src = images[current].src;
     });
 
     document.querySelector('.next').addEventListener('click', e => {
-      current = getIndex(1, images, current);
+      current = getIndex(1, images.length, current);
+      activeImage[0].src = images[current].src;
+    });
+  }
+
+  if (slideshowCarousel) {
+    if (images.length > 5) {
+      images.length = 5;
+    }
+
+    for (let i = 0; i < images.length; i++) {
+      images[i].addEventListener('click', e => {
+        const selected = document.querySelector('.selected');
+
+        selected && selected.classList.remove('selected');
+        activeImage[0].src = e.target.src;
+        images[i].classList.add('selected');
+      });
+    }
+
+    document.querySelector('.prev').addEventListener('click', e => {
+      current = getIndex(-1, images.length, current);
+      activeImage[0].src = images[current].src;
+    });
+
+    document.querySelector('.next').addEventListener('click', e => {
+      current = getIndex(1, images.length, current);
       activeImage[0].src = images[current].src;
     });
   }
