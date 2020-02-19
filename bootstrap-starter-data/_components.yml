@@ -209,11 +209,6 @@ _components:
         descriptionRecipe: '"This relish has a great flavor especially with the addition of celery! Chopped pecans or walnuts can be added if desired."'
         author: 'Karen Dunn'
         recipeTitle: 'Apple Cranberry Relish'
-        imgBigUrl: 'https://images.media-allrecipes.com/userphotos/720x405/7435846.jpg'
-        img1: 'https://images.media-allrecipes.com/userphotos/125x70/309957.jpg'
-        img2: 'https://images.media-allrecipes.com/userphotos/125x70/7435846.jpg'
-        img3: 'https://images.media-allrecipes.com/userphotos/125x70/1738054.jpg'
-        img4: 'https://images.media-allrecipes.com/userphotos/125x70/158870.jpg'
         stepInfoRecipe: 'Grate peel of orange; reserve. Peel oranges and discard white membranes. Separate oranges into sections and place half in a food processor or blender. To the food processor add half of the cranberries, apples and celery. Process until coarsely chopped. Transfer to a bowl; repeat with remaining oranges, cranberries, apples and celery. Stir in sugar and reserved orange peel. Cover and refrigerate overnight.'
         readyTimeRecipe: '12h 30m'
         preparationTimeStep: '30m'
@@ -238,6 +233,8 @@ _components:
         likes: '73'
         reviews: '37'
         photos: '3'
+        carousel: 
+          _ref: /_components/carousel/instances/carousel
  
       test:
         type: ''
@@ -284,6 +281,18 @@ _components:
           https://www.allrecipes.com/recipe/9111/cranberry-sauce/?internalSource=similar_recipe_banner&referringId=22950&referringContentType=Recipe&clickId=simslot_2 * 
           2k * https://images.media-allrecipes.com/userphotos/150x150/743657.jpg * Jack'
         recommendedRecipe: []
+  carousel:
+    instances:
+      carousel:
+        images:
+          - 
+            bigImage: https://images.media-allrecipes.com/userphotos/720x405/7435846.jpg
+          - 
+            bigImage: https://images.media-allrecipes.com/userphotos/720x405/1738054.jpg
+          - 
+            bigImage: https://images.media-allrecipes.com/userphotos/250x250/309957.jpg
+          - 
+            bigImage: https://images.media-allrecipes.com/userphotos/250x250/158870.jpg
 
 
       

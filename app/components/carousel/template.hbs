@@ -1,0 +1,14 @@
+<div data-uri="{{ default _ref _self }}" data-editable="settings" class="container">
+  <div class="imgActive">
+      <img src="https://picsum.photos/470/270" class="active">
+      <div class="arrows">
+        <a class="prev">{{{ read 'public/media/sites/claydemo/flecha-hacia-la-izquierda.svg' }}}</a>
+        <a class="next">{{{ read 'public/media/sites/claydemo/flecha-derecha.svg' }}}</a>
+      </div>
+  </div>
+  <div class="images {{ options }}">
+    {{#each images}}
+      <img src="{{ bigImage }}" class="image">
+    {{/each}}
+  </div>
+</div>

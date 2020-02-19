@@ -1,0 +1,39 @@
+_version: 1.0
+
+_description: |
+  A basic carousel component.
+
+_confirmRemoval: true
+
+options:
+  _has:
+    input: radio
+    options:
+      - 
+        name: Slideshow
+        value: slideshow
+      - 
+        name: Carousel
+        value: carousel
+      - 
+        name: Slideshow and Carousel
+        value: slideshowCarousel
+
+images:
+  _has:
+    input: complex-list
+    props:
+      -
+        prop: bigImage
+        _label: url image
+        _has:
+          input: text
+  _placeholder:
+    text: Carousel Component
+    height: 470px
+
+_groups:
+  settings:
+    fields:
+      - options
+      - images
