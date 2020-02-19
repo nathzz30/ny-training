@@ -1,4 +1,4 @@
-_version: 1.7
+_version: 1.8
 
 _description: |
   A basic recipe component.
@@ -167,76 +167,10 @@ reviewsFormatting:
   _has:
     input: text
 
-images:
-  _has:
-    input: complex-list
-    props:
-      -
-        prop: bigImage
-        _label: ImageSelected
-        _has:
-          input: text
-      -
-        prop: littleImage
-        _label: image
-        _has:
-          input: text
-      -
-        prop: status
-        _label: status
-        _has:
-          input: text
-          
-
-imgBigUrl:
-  _label: Principal Image
-  _placeholder:
-    height: 255px
-    text: Principal image
-  _has:
-    input: text
-    type: url
-    help: Image URL
-
-img1:
-  _label: Image 1
-  _placeholder:
-    height: 58px
-    text: Image 1
-  _has:
-    input: text
-    type: url
-    help: Image URL
-
-img2:
-  _label: Image 2
-  _placeholder:
-    height: 58px
-    text: Image 2
-  _has:
-    input: text
-    type: url
-    help: Image URL
-
-img3:
-  _label: Image 3
-  _placeholder:
-    height: 58px
-    text: Image 3
-  _has:
-    input: text
-    type: url
-    help: Image URL
-
-img4:
-  _label: Image 4
-  _placeholder:
-    height: 58px
-    text: Image 4
-  _has:
-    input: text
-    type: url
-    help: Image URL
+carousel:
+  _component:
+    include:
+      - carousel
 
 likes:
   _label: Quantity of likes
@@ -281,7 +215,6 @@ _groups:
       - likes
       - reviews
       - photos
-      - images (Images)
       - stepInfoRecipe (Directions)
       - readyTimeRecipe (Directions)
       - preparationTimeStep (Directions)

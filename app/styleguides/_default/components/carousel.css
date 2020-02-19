@@ -1,0 +1,44 @@
+.container {
+  display: inline-block;
+}
+
+.arrows {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  align-items: center;
+}
+
+.image {
+  display: inline-block;
+  height: 50px;
+  opacity: 0.6;
+  width: 80px;
+}
+
+.image:hover {
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  height: 270px;
+  width: 470px;
+}
+
+.selected {
+  opacity: 1;
+}
+
+.imgActive {
+  display: inline-block;
+  position: relative;
+}

@@ -1,9 +1,8 @@
 <div data-uri="{{ default _ref _self }}" class="recipe">
-  <div data-editable="settings">
     {{#if recipeTitle}}
       <div data-editable="settings" class="information">
-        <p data-editable="settings" class="title">{{ recipeTitle }}</p>
-        <div data-editable="settings" class="score">
+        <p class="title">{{ recipeTitle }}</p>
+        <div class="score">
           <div class="imgScore">
             <img class="score-stars-recipe" src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg">
             <img class="score-stars-recipe" src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg">
@@ -11,31 +10,24 @@
             <img class="score-stars-recipe" src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg">
             <img class="score-stars-recipe" src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/half-star-2015.svg">
           </div>
-          <div data-editable="settings" class="infoScore">
-            <a data-editable="settings" href="/" class="made">{{ likesFormatting }} made it</a>
-            <a data-editable="settings" href="/" class="reviews">{{ reviewsFormatting }} reviews</a>
-            <a data-editable="settings" href="/" class="photos">{{ photosFormatting }} photos</a>
+          <div class="infoScore">
+            <a href="/" class="made">{{ likesFormatting }} made it</a>
+            <a href="/" class="reviews">{{ reviewsFormatting }} reviews</a>
+            <a href="/" class="photos">{{ photosFormatting }} photos</a>
           </div>
         </div>
         {{#if author }}
-          <p data-editable="settings" class="recipeBy">Recipe by: <span class="recipeDescription">{{ author }}</span></p>
+          <p class="recipeBy">Recipe by: <span class="recipeDescription">{{ author }}</span></p>
         {{/if}}
         {{#if descriptionRecipe }}
-          <p data-editable="settings" class="description">{{ descriptionRecipe }}</p>
+          <p class="description">{{ descriptionRecipe }}</p>
           <div class="subscribe">
-            <a data-editable="settings" href="/">Featured in Allrecipes Magazine -- Subscribe!</a>
+            <a href="/">Featured in Allrecipes Magazine -- Subscribe!</a>
           </div>
         {{/if}}
       </div>
-      <div class="carousel">
-        <div class="imgActive">
-          <img src="", class="active">
-        </div>
-        <div class="images">
-          {{#each images}}
-            <img src={{ bigImage }} class="image">
-          {{/each}}
-        </div>
+      <div class="carouselComponent">
+        {{> carousel carousel}}
       </div>
       <div class="btns">
         <button class="btn"><a class="svg">{{{ read 'public/media/sites/claydemo/like.svg' }}}</a> Save</button>
@@ -103,5 +95,5 @@
         <a class="btn-mail">{{{ read 'public/media/sites/claydemo/email.svg' }}}</a>
       </div>
     {{/if}}
-  </div>
+
 </div>

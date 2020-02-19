@@ -84,31 +84,8 @@ a {
   text-align: center;
 }
 
-.carousel {
+.carouselComponent {
   display: inline-block;
-}
-
-.image {
-  display: inline-block;
-  height: 50px;
-  width: 80px;
-}
-
-.active {
-  height: 270px;
-  width: 470px;
-}
-
-.imgActive {
-  display: inline-block;
-}
-
-.imagesRelated {
-  display: inline-block;
-}
-
-.hidden {
-  display: none;
 }
 
 .btns {
