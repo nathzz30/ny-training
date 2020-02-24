@@ -175,17 +175,20 @@ carousel:
 likes:
   _label: Quantity of likes
   _has:
-    input: number
+    input: text
+    type: numbers
 
 reviews:
   _label: Quantity of Reviews
   _has:
-    input: number
+    input: text
+    type: numbers
 
 photos:
   _label: Quantity of Photos
   _has:
-    input: number
+    input: text
+    type: numbers
 
 tags:
   _component:
@@ -193,6 +196,11 @@ tags:
       - tags
 normalizedTags:
   _subscribe: normalizedTags
+
+carouselUrls:
+  _has:
+    input: complex-list
+  _subscribe: images
 
 recipeDate:
   _has:

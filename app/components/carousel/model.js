@@ -4,7 +4,6 @@ function settingUpOptions(data) {
 
 module.exports.render = function(uri, data, locals) {
   settingUpOptions(data);
-  console.log('Data inside carousel >>>>>>>> ', data);
 
   return data;
 };

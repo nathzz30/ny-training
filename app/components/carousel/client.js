@@ -19,8 +19,10 @@ module.exports = () => {
   let activeImage = document.getElementsByClassName('active');
   let arrows = document.querySelector('.arrows');
   let current = 0;
-  activeImage[0].src = images[0].src;
-  images[0].classList.add('selected');
+  if (activeImage && images) {
+    activeImage[0].src = images[0].src;
+    images[0].classList.add('selected');
+  }
 
   if (slideshow) {
     arrows.classList.add('hidden');
