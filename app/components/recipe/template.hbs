@@ -1,4 +1,4 @@
-<div data-uri="{{ default _ref _self }}" class="recipe">
+<div class="recipe" data-uri="{{ default _ref _self }}">
     {{#if recipeTitle}}
       <div data-editable="settings" class="information">
         <p class="title">{{ recipeTitle }}</p>
@@ -61,12 +61,12 @@
         <div class="directions">
           <p>Directions</p>
           <div class="stepsBtns">
-            <button class="stepBtn">Add a Note <a class="ingredient-icon">{{{ read 'public/media/sites/claydemo/icons8-edit.svg' }}}</a></button>
-            <button class="stepBtn">Print <a class="ingredient-icon">{{{ read 'public/media/sites/claydemo/printer-printing-document.svg' }}}</a></button>
+            <button class="stepBtn">Add a Note <a>{{{ read 'public/media/sites/claydemo/icons8-edit.svg' }}}</a></button>
+            <button class="stepBtn">Print <a>{{{ read 'public/media/sites/claydemo/printer-printing-document.svg' }}}</a></button>
           </div>
         </div>
         <div class="timePreparation">
-          <a class="preparation-icon">{{{ read 'public/media/sites/claydemo/wall-clock2.svg' }}}</a>
+          <a class="clock-directions">{{{ read 'public/media/sites/claydemo/wall-clock2.svg' }}}</a>
           <p class="element"><span>Prep</span> {{preparationTimeStep}}</p>
           <p class="element"><span>Ready In</span> {{readyTimeRecipe}}</p>
         </div>
@@ -85,7 +85,7 @@
           </p>
           <button class="nutri-made-it"><a class="made-it">{{{ read 'public/media/sites/claydemo/iconmonstr-eat-7-copy.svg' }}}</a> I made it!</button>
         </div>
-        <div data-editable="tags">{{> tags tags}}</div>
+        <div data-editable="tags" class="tags">{{> tags tags}}</div>
       {{/if}}
       <div class="socials">
         <p>Share</p>

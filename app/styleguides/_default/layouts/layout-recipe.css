@@ -1,46 +1,116 @@
-body {
-  display: block;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .main {
+    max-width: 550px;
+    background-color: white;
+    margin: 10px;
+  }
+
+  .sidebar {
+    background-color: white;
+    margin: 0px 10px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: auto;
+  }
 }
 
-/* .layout-recipe {
-    background-color: #e6e6e6;
-} */
-
-.wrapper {
-  display: flex;
-  margin: 0 auto;
-  max-width: 1270px;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 600px;
+    margin: auto;
+  }
 }
 
-.bottom {
-  margin-top: 50px;
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 991px;
+    margin: auto;
+  }
 }
 
-.main {
-  width: 70%;
-  margin-bottom: 60px;
-  background-color: white;
-  margin-right: 10px;
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .main {
+    width: 69%;
+    background-color: white;
+    margin: 10px;
+  }
+
+  .sidebar {
+    width: 29%;
+    background-color: white;
+    margin: 5px;
+  }
+
+  .recipe {
+    display: inline-block;
+    margin: 5px;
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 29%;
+    background-color: white;
+    margin: 5px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1199px;
+    margin: auto;
+  }
 }
 
-.sidebar {
-  width: 28%;
-  background-color: white;
-  max-height: 1136.13px;
-}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .main {
+    width: 69%;
+    background-color: white;
+    margin: 10px;
+  }
 
-.recipe {
-  display: inline-block;
-  margin: 5px;
-  width: 100%;
-}
+  .sidebar {
+    width: 29%;
+    background-color: white;
+    margin: 5px;
+  }
 
-.recipeRelated {
-  display: block;
-  margin: 5px;
-  width: 100%;
-}
+  .recipe {
+    display: inline-block;
+    margin: 5px;
+    width: 100%;
+  }
 
-.kiln-placeholder {
-  max-height: 700px;
+  .recipeRelated {
+    display: block;
+    margin: 5px;
+    width: 100%;
+  }
+
+  .kiln-placeholder {
+    max-height: 700px;
+  }
+
+  .wrapper {
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    max-width: 1444px;
+    margin: auto;
+  }
 }
