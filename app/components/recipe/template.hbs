@@ -49,10 +49,12 @@
         {{#if ingredients}}
           <div class="ingredientsRecipe">
             {{#each ingredients}}
-              <a class="ingredient-icon">{{{ read 'public/media/sites/claydemo/plus.svg' }}}</a><p>{{cantMeasure}} {{unitMeasure}} {{ingredient}}
+              <div class="ingredient">
+                <a class="ingredient-icon">{{{ read 'public/media/sites/claydemo/plus.svg' }}}</a><p>{{cantMeasure}} {{unitMeasure}} {{ingredient}}
                 {{#if instructions}}
                 , {{instructions}}
                 {{/if}}</p>
+              </div>
             {{/each}}
           </div>
         {{/if}}

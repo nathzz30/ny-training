@@ -1,125 +1,11 @@
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .recommended-recipes {
-    cursor: pointer;
-    font-family: 'Source Sans Pro', Arial;
-    font-size: 14px;
-    max-height: 315px;
-    margin-bottom: 30px;
-    max-width: 304px;
-  }
-
-  .recipes-sidebar {
-    width: 500px;
-    display: flex;
-  }
-
-  .head-sidebar {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .more-sidebar {
-    color: #ff7e1a;
-    text-decoration: none;
-    font-size: 14px;
-  }
-
-  .explore-sidebar {
-    font-size: 20px;
-    color: #4d4d4d;
-    display: block;
-  }
-
-  .recipe-sidebar {
-    margin: 5px;
-    max-width: 120px;
-  }
-
-  .image-sidebar {
-    height: 120px;
-    width: 100%;
-  }
-
-  .title-sidebar {
-    color: #2d2d2d;
-    max-width: 120px;
-    margin: 10px 0px;
-  }
-
-  .score-sidebar {
-    display: inline-block;
-  }
-
-  .stars-sidebar {
-    display: inline-block;
-  }
-
-  .likes-sidebar {
-    color: #999999;
-    margin: 5px;
-  }
-
-  .author-sidebar {
-    margin: 5px;
-  }
+.author-sidebar {
+  margin: 5px;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .image-sidebar {
-    height: 120px;
-    width: 100%;
-  }
-
-  .recipe-sidebar {
-    margin: 5px;
-    max-width: 120px;
-  }
-
-  .recipes-sidebar {
-    display: flex;
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .recipes-sidebar {
-    display: flex;
-  }
-
-  .explore-sidebar {
-    font-size: 20px;
-    color: #4d4d4d;
-    display: block;
-  }
-
-  .recipe-sidebar {
-    margin: 5px;
-    max-width: 136px;
-  }
-
-  .image-sidebar {
-    height: 130px;
-    width: 100%;
-  }
-
-  .title-sidebar {
-    color: #2d2d2d;
-    max-width: 136px;
-  }
-
-  .author-sidebar {
-  }
+.explore-sidebar {
+  font-size: 20px;
+  color: #4d4d4d;
+  display: block;
 }
 
 .head-sidebar {
@@ -127,8 +13,14 @@
   justify-content: space-between;
 }
 
+.image-sidebar {
+  height: 130px;
+  width: 100%;
+}
+
 .likes-sidebar {
   color: #999999;
+  margin: 5px;
 }
 
 .more-sidebar {
@@ -138,6 +30,20 @@
   display: flex;
   align-items: center;
   top: 25px;
+}
+
+.title-sidebar {
+  color: #2d2d2d;
+  max-width: 136px;
+}
+
+.recipes-sidebar {
+  display: flex;
+}
+
+.recipe-sidebar {
+  margin: 5px;
+  max-width: 136px;
 }
 
 .recommended-recipes {
@@ -155,4 +61,58 @@
 
 .stars-sidebar {
   display: inline-block;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .recipes-sidebar {
+    width: 500px;
+  }
+
+  .head-sidebar {
+    width: 100%;
+  }
+
+  .recipe-sidebar {
+    max-width: 120px;
+  }
+
+  .image-sidebar {
+    height: 120px;
+  }
+
+  .title-sidebar {
+    max-width: 120px;
+    margin: 10px 0px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .recipe-sidebar {
+    margin: 5px;
+  }
+
+  .recipes-sidebar {
+    display: flex;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .recipe-sidebar {
+    margin: 5px;
+  }
+
+  .recipes-sidebar {
+    display: flex;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

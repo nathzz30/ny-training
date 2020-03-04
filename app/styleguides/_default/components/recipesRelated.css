@@ -1,48 +1,65 @@
+.recipes-related {
+  cursor: pointer;
+  font-family: 'Source Sans Pro', Arial;
+  font-size: 14px;
+  max-height: 350px;
+  margin-bottom: 30px;
+}
+
+.recipes {
+  display: flex;
+}
+
+.explore {
+  font-size: 26px;
+  display: block;
+}
+
+.reciperr {
+  margin: 5px;
+  max-width: 150px;
+}
+
+.imagerr {
+  height: 130px;
+  width: 100%;
+}
+
+.titlerr {
+  color: #2d2d2d;
+  max-width: 150px;
+}
+
+.scorerr {
+  display: inline-block;
+}
+
+.starsrr {
+  display: inline-block;
+}
+
+.likesrr {
+  color: #999999;
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .recipes-related {
-    cursor: pointer;
-    font-family: 'Source Sans Pro', Arial;
-    font-size: 14px;
     max-height: 300px;
   }
 
-  .recipes {
-    display: flex;
-  }
-
   .explore {
-    font-size: 26px;
-    display: block;
     margin: 15px 5px;
-  }
-
-  .reciperr {
-    margin: 5px;
-    max-width: 120px;
   }
 
   .imagerr {
     height: 120px;
-    width: 100%;
   }
 
   .titlerr {
-    color: #2d2d2d;
-    max-width: 150px;
     margin: 10px 0px;
   }
 
-  .scorerr {
-    display: inline-block;
-  }
-
-  .starsrr {
-    display: inline-block;
-  }
-
   .likesrr {
-    color: #999999;
     margin: 5px;
   }
 }
@@ -61,47 +78,4 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .recipes-related {
-    cursor: pointer;
-    font-family: 'Source Sans Pro', Arial;
-    font-size: 14px;
-    max-height: 350px;
-    margin-bottom: 30px;
-  }
-
-  .recipes {
-    display: flex;
-  }
-
-  .explore {
-    font-size: 26px;
-    display: block;
-  }
-
-  .reciperr {
-    margin: 5px;
-    max-width: 150px;
-  }
-
-  .imagerr {
-    height: 130px;
-    width: 100%;
-  }
-
-  .titlerr {
-    color: #2d2d2d;
-    max-width: 150px;
-  }
-
-  .scorerr {
-    display: inline-block;
-  }
-
-  .starsrr {
-    display: inline-block;
-  }
-
-  .likesrr {
-    color: #999999;
-  }
 }
