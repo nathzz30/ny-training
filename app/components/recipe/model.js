@@ -5,6 +5,7 @@ const _get = require('lodash/get'),
   dateFormat = require('date-fns/format'),
   dateParse = require('date-fns/parse'),
   utils = require('../../services/universal/utils'),
+  queryServices = require('../../services/query'),
   has = utils.has; // convenience
 
 /**
@@ -50,6 +51,7 @@ function formatting(data) {
 module.exports.render = function(uri, data, locals) {
   // first, let's get all the synchronous stuff out of the way:
   // setting fields, etc
+
   formatDate(data, locals);
   setCanonicalUrl(data, locals);
   formatting(data);

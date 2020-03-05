@@ -3,33 +3,15 @@
 const { search, existsIndex } = require('../../services/client/elastic');
 const { formattingNumber } = require('../../services/universal/utils');
 const log = require('../../services/universal/log').setup({ file: __filename });
+const queryServices = require('../../services/query');
 
 module.exports.render = function(uri, data, locals) {
   const index = 'local_recipes_index';
   const [canonicalUrlRecipe] = locals.url.split('?');
-
-  const query = {
-    sort: [
-      {
-        likes: {
-          order: 'desc'
-        }
-      }
-    ],
-    query: {
-      bool: {
-        must_not: [
-          {
-            match_phrase: {
-              canonicalUrl: canonicalUrlRecipe
-            }
-          }
-        ]
-      }
-    },
-    from: 0,
-    size: 2
-  };
+  let query = queryServices.newQuery();
+  query = queryServices.sort(query, { likes: { order: 'desc' } });
+  query = queryServices.mustNotMatch_phrase(query, { canonicalUrl: canonicalUrlRecipe });
+  query = queryServices.fromSize(query, { from: 0, size: 2 });
 
   return existsIndex(index)
     .then(existsIndex => {

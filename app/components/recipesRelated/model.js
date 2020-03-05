@@ -3,6 +3,7 @@
 const { search, existsIndex } = require('../../services/client/elastic');
 const { formattingNumber } = require('../../services/universal/utils');
 const log = require('../../services/universal/log').setup({ file: __filename });
+const queryServices = require('../../services/query');
 
 module.exports.render = function(uri, data, locals) {
   const index = 'local_recipes_index';
@@ -11,26 +12,10 @@ module.exports.render = function(uri, data, locals) {
   data.recipeNormalizedTagsValue.forEach(element => {
     element == 'recipe' ? tagsQuery : (tagsQuery += ' ' + element);
   });
-  const query = {
-    query: {
-      bool: {
-        must: [
-          {
-            match: {
-              normalizedTags: tagsQuery
-            }
-          }
-        ],
-        must_not: [
-          {
-            match_phrase: {
-              canonicalUrl: canonicalUrlRecipe
-            }
-          }
-        ]
-      }
-    }
-  };
+  let query = queryServices.newQuery();
+  query = queryServices.mustMatch(query, { normalizedTags: tagsQuery });
+  query = queryServices.mustNotMatch_phrase(query, { canonicalUrl: canonicalUrlRecipe });
+  query = queryServices.fromSize(query, { from: 0, size: 5 });
 
   return existsIndex(index)
     .then(existsIndex => {
