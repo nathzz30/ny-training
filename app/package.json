@@ -24,6 +24,7 @@
     "amphora-search": "7.3.0",
     "amphora-serve-static": "0.0.1",
     "amphora-storage-postgres": "1.2.0",
+    "amphora-rss": "0.8.0",
     "bluebird": "^3.5.3",
     "body-parser": "^1.18.2",
     "clay-kiln": "^8.3.3",

@@ -57,3 +57,14 @@ _layouts:
         kilnInternals:
           -
             _ref: /_components/clay-kiln/instances/general
+  layout-renderers:
+    instances:
+      renderers:
+        head: head
+        headLayout:
+          -
+            _ref: /_components/meta-icons/instances/claydemo
+        main: main
+        kilnInternals:
+          -
+            _ref: /_components/clay-kiln/instances/general

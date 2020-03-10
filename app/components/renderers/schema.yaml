@@ -1,0 +1,41 @@
+_version: 1.0
+
+_description: |
+  A component to test renderers
+
+elements:
+  _has:
+    input: complex-list
+    collapse: title
+    filter: true
+    props:
+      -
+        prop: title
+        _label: Title
+        _has:
+          input: text
+      -
+        prop: description
+        _label: description
+        _has:
+          input: text
+      -
+        prop: image
+        _label: Image
+        _has: 
+          input: text
+      -
+        prop: link
+        _label: URL
+        _has:
+          input: text
+      -
+        prop: author
+        _label: Recipe Author 
+        _has:
+          input: text
+
+_groups:
+  settings:
+    fields:
+      - list

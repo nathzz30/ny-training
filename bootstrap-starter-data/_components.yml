@@ -293,6 +293,34 @@ _components:
             bigImage: https://images.media-allrecipes.com/userphotos/250x250/309957.jpg
           - 
             bigImage: https://images.media-allrecipes.com/userphotos/250x250/158870.jpg
-
+  renderers:
+    instances:
+      rss:
+        list:
+          -
+            title: 'This is a title for test'
+            description: 'This is a little description for this test'
+            link: www.google.com
+            image: http://placekitten.com/200/300
+          -
+            title: 'A title for testing yeihhhh'
+            description: 'This is a little description for this test asdasdasdasd'
+            link: www.facebook.com
+            image: http://placekitten.com/200/301
+          -
+            title: 'asdasdas asdas asdasdasd sss'
+            description: 'This description ajajjajaja muajajaj mujajajaja'
+            link: www.youtube.com
+            image: http://placekitten.com/200/302
+          -
+            title: 'THE REAL TITLEEEEE'
+            description: 'sorprise modafoka muaajajajajajjaja'
+            link: www.instagram.com
+            image: http://placekitten.com/200/303
+          -
+            title: 'Hi this is another title e.e'
+            description: 'hola me llamo nathaly y esto es una prueba'
+            link: www.cocacola.com
+            image: http://placekitten.com/200/304
 
       

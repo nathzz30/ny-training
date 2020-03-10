@@ -33,3 +33,8 @@ _pages:
     sidebar:
       - /_components/sidebar/instances/new
     head: []
+  renderers:
+    layout: /_layouts/layout-renderers/instances/renderers
+    main:
+      - /_components/renderers/instances/rss
+    head: []

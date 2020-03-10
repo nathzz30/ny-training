@@ -1,0 +1,35 @@
+_description: A layout with special styling for our recipes. Used for
+
+head:
+  _componentList:
+    page: true
+    include:
+      - meta-site
+      - meta-title
+      - meta-url
+      - meta-description
+      - meta-keywords
+      - meta-authors
+      - meta-image
+
+headLayout:
+  _componentList:
+    include:
+      - meta-site
+      - meta-icons
+
+main:
+  _placeholder:
+    text: Main Section
+    height: 600px
+  _componentList:
+    page: true
+    include: 
+      - renderers
+
+
+kilnInternals:
+  _componentList:
+    internals: true
+    include:
+      - clay-kiln
