@@ -38,6 +38,24 @@ const mustMatch = (query, params) => {
 };
 
 /**
+ * This function add a property called match_all to bring all from ES (Just 20 row for default)
+ *
+ * @param {object} query - A query object
+ * @return {object} query object
+ *
+ * @example
+ *
+ *     match_all({ query: {} })
+ */
+const match_all = query => {
+  const result = _.get(query, 'query', {});
+  result['match_all'] = {};
+  _.set(query, 'query', result);
+
+  return query;
+};
+
+/**
  * This function add a property called must and other called match_phrase to the query object
  * to be used in a filter on ES
  *
@@ -137,6 +155,7 @@ const sort = (query, property) => {
 
 module.exports = {
   fromSize,
+  match_all,
   mustMatch,
   mustMatch_phrase,
   mustNotMatch,

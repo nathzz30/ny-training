@@ -300,27 +300,27 @@ _components:
           -
             title: 'This is a title for test'
             description: 'This is a little description for this test'
-            link: www.google.com
+            link: https://www.google.com
             image: http://placekitten.com/200/300
           -
             title: 'A title for testing yeihhhh'
             description: 'This is a little description for this test asdasdasdasd'
-            link: www.facebook.com
+            link: https://www.facebook.com
             image: http://placekitten.com/200/301
           -
             title: 'asdasdas asdas asdasdasd sss'
             description: 'This description ajajjajaja muajajaj mujajajaja'
-            link: www.youtube.com
+            link: https://www.youtube.com
             image: http://placekitten.com/200/302
           -
             title: 'THE REAL TITLEEEEE'
             description: 'sorprise modafoka muaajajajajajjaja'
-            link: www.instagram.com
+            link: https://www.instagram.com
             image: http://placekitten.com/200/303
           -
             title: 'Hi this is another title e.e'
             description: 'hola me llamo nathaly y esto es una prueba'
-            link: www.cocacola.com
+            link: https://www.cocacola.com
             image: http://placekitten.com/200/304
 
       

@@ -60,10 +60,6 @@ _layouts:
   layout-renderers:
     instances:
       renderers:
-        head: head
-        headLayout:
-          -
-            _ref: /_components/meta-icons/instances/claydemo
         main: main
         kilnInternals:
           -

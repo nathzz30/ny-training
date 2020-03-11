@@ -17,14 +17,22 @@ function handlerSave(stream) {
     .parallel(1)
     .flatten()
     .map(element => {
-      console.log('element inside the handler of elastic >>>>>> ', element);
-      const { recipeTitle, canonicalUrl, carouselUrls, likes, normalizedTags, author } = JSON.parse(
-        element.value
-      );
+      const {
+        recipeTitle,
+        canonicalUrl,
+        descriptionRecipe,
+        carouselUrls,
+        date,
+        likes,
+        normalizedTags,
+        author
+      } = JSON.parse(element.value);
       return {
         _ref: element.key,
         recipeTitle,
         canonicalUrl,
+        date,
+        descriptionRecipe,
         carouselUrls,
         likes,
         normalizedTags,

@@ -7,14 +7,6 @@
     {{#unless (includes (default _ref _self) "@published") }}
       <meta name="robots" content="noindex">
     {{/unless}}
-
-    {{! head components }}
-    <!-- data-editable="head" -->
-    {{> component-list head }}
-    <!-- data-editable-end -->
-    <!-- data-editable="headLayout" -->
-    {{> component-list headLayout }}
-    <!-- data-editable-end -->
   </head>
   <body class="layout-recipe">
     <section class="top" data-editable="top" data-track-zone="top">{{> component-list top }}</section>
