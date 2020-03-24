@@ -9,8 +9,6 @@ module.exports = (ref, data) => {
   };
   data.ingredients = [];
 
-  console.log('data.ingredient1: ', data.ingredient1);
-
   if (data.ingredient1) {
     let [count, unitMeasure, ingredient] = data.ingredient1.split(' ');
 

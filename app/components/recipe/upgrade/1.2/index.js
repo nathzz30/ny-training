@@ -14,8 +14,6 @@ module.exports = (ref, data) => {
   };
   data.ingredients = [];
 
-  console.log('data.ingredient1: ', data.ingredient1);
-
   if (data.ingredient1) {
     let [cantMeasure, unitMeasure, ingredient, instructions] = data.ingredient1.split(' ');
 

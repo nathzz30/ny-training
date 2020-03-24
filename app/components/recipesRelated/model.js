@@ -15,7 +15,7 @@ module.exports.render = function(uri, data, locals) {
   let query = queryServices.newQuery();
   query = queryServices.mustMatch(query, { normalizedTags: tagsQuery });
   query = queryServices.mustNotMatch_phrase(query, { canonicalUrl: canonicalUrlRecipe });
-  query = queryServices.fromSize(query, { from: 0, size: 5 });
+  query = queryServices.fromSize(query, { from: 0, size: 3 });
 
   return existsIndex(index)
     .then(existsIndex => {

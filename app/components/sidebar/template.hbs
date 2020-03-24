@@ -6,7 +6,7 @@
   <div data-editable="settings" class="recipes-sidebar">
     {{#each recommendedRecipe}}
       {{#if title}}
-        <div data-editable="settings" class="recipe-sidebar">
+        <a href="{{urlRecipe}}" data-editable="settings" class="recipe-sidebar">
           <img data-editable="settings" src="{{urlImg}}" class="image-sidebar">
           <p data-editable="settings" class="title-sidebar">{{ title }}</p>
           <div data-editable="settings" class="score-sidebar">
@@ -20,7 +20,7 @@
             <p class="likes-sidebar">{{likes}}</p>
           </div>
           <p class="author-sidebar">By {{author}}</p>
-        </div>
+        </a>
       {{/if}}
     {{/each}}
   </div>

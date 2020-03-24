@@ -3,6 +3,10 @@ a {
   text-decoration: none;
 }
 
+.social-icon:hover {
+  fill: #ff7e1a;
+}
+
 .btn {
   display: flex;
   background-color: #d9d9d9;
@@ -20,6 +24,30 @@ a {
   height: 60px;
   display: flex;
   justify-content: space-between;
+}
+
+.btn-twitter {
+  color: #00acee;
+}
+
+.btn-twitter:hover {
+  color: #feaa26;
+}
+
+.btn-facebook {
+  color: #3b5998;
+}
+
+.btn-facebook:hover {
+  color: #feaa26;
+}
+
+.btn-pinterest {
+  color: #c8232c;
+}
+
+.btn-pinterest:hover {
+  color: #feaa26;
 }
 
 .carouselComponent {
@@ -261,7 +289,7 @@ a {
   padding: 5px;
   width: 160px;
   cursor: pointer;
-  margin-top: 20px;
+  margin: 0 2px;
 }
 
 .stepsBtns {
@@ -748,7 +776,7 @@ a {
   }
 
   .nutri-made-it {
-    margin: 5px 0;
+    margin: auto;
     justify-content: center;
   }
 

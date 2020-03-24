@@ -18,6 +18,7 @@
 
 .container {
   display: inline-block;
+  max-height: 260px;
 }
 
 .hidden {
@@ -55,6 +56,10 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .active {
+    height: 180px;
+  }
+
   .imgActive {
     height: 180px;
     width: 320px;
@@ -68,6 +73,10 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  .active {
+    height: 240px;
+  }
+
   .imgActive {
     height: 240px;
     width: 450px;
@@ -76,6 +85,10 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  .active {
+    height: 200px;
+  }
+
   .imgActive {
     height: 200px;
     width: 360px;
@@ -84,6 +97,10 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  .active {
+    height: 200px;
+  }
+
   .imgActive {
     height: 200px;
     width: 360px;
@@ -92,6 +109,10 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .active {
+    height: 260px;
+  }
+
   .imgActive {
     width: 440px;
     height: 260px;

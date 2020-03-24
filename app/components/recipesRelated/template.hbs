@@ -3,7 +3,7 @@
   <div data-editable="settings" class="recipes">
     {{#each relatedRecipe}}
       {{#if title}}
-        <div data-editable="settings" class="reciperr">
+        <a href="{{urlRecipe}}" data-editable="settings" class="reciperr">
           <img data-editable="settings" src="{{urlImg}}" class="imagerr">
           <p data-editable="settings" class="titlerr">{{ title }}</p>
           <div data-editable="settings" class="scorerr">
@@ -16,7 +16,7 @@
             </div>
             <p class="likesrr">{{likes}}</p>
           </div>
-        </div>
+        </a>
       {{/if}}
     {{/each}}
   </div>
