@@ -3,7 +3,13 @@ _pages:
     layout: /_layouts/layout/instances/article
     main:
       - /_components/article/instances/sample
-    head: []
+    head:
+      - /_components/meta-title/instances/new
+      - /_components/meta-url/instances/new
+      - /_components/meta-description/instances/new
+      - /_components/meta-image/instances/new
+      - /_components/meta-keywords/instances/new
+      - /_components/meta-authors/instances/new
   new-standard:
     layout: /_layouts/layout/instances/article
     main:
@@ -32,7 +38,13 @@ _pages:
       - /_components/main-recipe/instances/recipe-sample
     sidebar:
       - /_components/sidebar/instances/new
-    head: []
+    head:
+      - /_components/meta-title/instances/new
+      - /_components/meta-url/instances/new
+      - /_components/meta-description/instances/new
+      - /_components/meta-image/instances/new
+      - /_components/meta-keywords/instances/new
+      - /_components/meta-authors/instances/new
   renderers:
     layout: /_layouts/layout-renderers/instances/renderers
     main:
