@@ -7,6 +7,7 @@ _confirmRemoval: true
 
 descriptionRecipe:
   _label: Recipe description
+  _publish: pageDescription
   _has:
     input: text
 
@@ -41,52 +42,39 @@ ingredients:
     collapse: ingredient
     filter: true
     props:
-      -
-        prop: ingredient
+      - prop: ingredient
         _label: Ingredient
         _has:
           input: text
-      -
-        prop: cantMeasure
+      - prop: cantMeasure
         _label: Cant Measure
         _has:
           input: text
           type: numbers
-      -
-        prop: unitMeasure
+      - prop: unitMeasure
         _label: Unit of Measure
-        _has: 
+        _has:
           input: radio
           options:
-            - 
-              name: Milligramme (mg)
+            - name: Milligramme (mg)
               value: mg
-            - 
-              name: Gramme (g)
+            - name: Gramme (g)
               value: g
-            - 
-              name: Kilogramme (kg)
+            - name: Kilogramme (kg)
               value: kg
-            - 
-              name: Millilitre (ml)
+            - name: Millilitre (ml)
               value: ml
-            - 
-              name: Litre (l)
+            - name: Litre (l)
               value: l
-            - 
-              name: Pound (lb)
+            - name: Pound (lb)
               value: lb
-            - 
-              name: Ounce (oz)
+            - name: Ounce (oz)
               value: oz
-            - 
-              name: Cup (c)
+            - name: Cup (c)
               value: c
-            - 
-              name: Unit
+            - name: Unit
               value: unit
-      -
-        prop: instructions
+      - prop: instructions
         _label: Specials Instructions
         _has:
           input: text
@@ -97,60 +85,50 @@ nutriFacts:
     collapse: fact
     filter: true
     props:
-      -
-        prop: cantMeasure
+      - prop: cantMeasure
         _label: Cant Measure
         _has:
           input: text
           type: numbers
-      -
-        prop: unitMeasure
+      - prop: unitMeasure
         _label: Unit of Measure
-        _has: 
+        _has:
           input: radio
           options:
-            - 
-              name: Milligramme (mg)
+            - name: Milligramme (mg)
               value: mg
-            - 
-              name: Gramme (g)
+            - name: Gramme (g)
               value: g
-            - 
-              name: Kilogramme (kg)
+            - name: Kilogramme (kg)
               value: kg
-            - 
-              name: Millilitre (ml)
+            - name: Millilitre (ml)
               value: ml
-            - 
-              name: Litre (l)
+            - name: Litre (l)
               value: l
-            - 
-              name: Pound (lb)
+            - name: Pound (lb)
               value: lb
-            - 
-              name: Ounce (oz)
+            - name: Ounce (oz)
               value: oz
-            - 
-              name: Cup (c)
+            - name: Cup (c)
               value: c
-            - 
-              name: Unit
+            - name: Unit
               value: unit
-      -
-        prop: fact
+      - prop: fact
         _label: Fact Name
         _has:
           input: text
 
 recipeTitle:
   _label: Title of the Recipe
+  _publish: pageTitle
   _has:
     input: text
 
-author:
-  _label: Author of the Recipe
+authors:
+  _label: Authors of the Recipe
+  _publish: pageAuthors
   _has:
-    input: text
+    input: simple-list
 
 photosFormatting:
   _label: Quantity of photos
@@ -219,7 +197,7 @@ _groups:
     fields:
       - recipeTitle
       - descriptionRecipe
-      - author
+      - authors
       - likes
       - reviews
       - photos
