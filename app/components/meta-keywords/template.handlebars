@@ -1,7 +1,7 @@
 <!-- data-uri="{{{ default _ref _self }}}" -->
 {{#if @root.locals.edit}}
-  <meta property="article:tag" content="{{ join (map tags (getProp 'text')) }}">
-  <meta property="sailthru.tags" content="{{ join (map tags (getProp 'text')) }}">
+  <meta property="article:tag" content="{{ join tags }}">
+  <meta property="sailthru.tags" content="{{ join tags }}">
 {{else}}
   <meta property="article:tag" content="{{ join tags }}">
   <meta property="sailthru.tags" content="{{ join tags }}">
